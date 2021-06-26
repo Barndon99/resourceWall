@@ -1,4 +1,4 @@
-INSERT INTO resources (category_id, owner_id, url, resource_img_url, timestamp)
+INSERT INTO resources (category_id, owner_id, url, resource_img, timestamp)
 VALUES (1, 3, 'https://launchschool.com/books/git/read/introduction', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.techrepublic.com%2Farticle%2Fgit-everything-the-pros-need-to-know%2F&psig=AOvVaw0ABZ0ay6r07jD2GDFsh0jb&ust=1624821155787000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCJjP99WAtvECFQAAAAAdAAAAABAP', current_timestamp),
        (2, 2, 'http://www.viemu.com/vi-vim-cheat-sheet.gif', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FVim_(text_editor)&psig=AOvVaw2vGlthUYn-wqOpS7VoQNpI&ust=1624821225189000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCPCfv_OAtvECFQAAAAAdAAAAABAD' , current_timestamp),
        (3, 1, 'http://pythontutor.com/javascript.html#mode=edit', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Finsights.dice.com%2F2020%2F09%2F24%2F5-reasons-python-still-king-of-programming-languages%2F&psig=AOvVaw2NyBP9QYGXzUykNUz1Nalu&ust=1624821271207000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCMCk14iBtvECFQAAAAAdAAAAABAI', current_timestamp);
