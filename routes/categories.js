@@ -8,12 +8,13 @@
 const express = require('express');
 const router  = express.Router();
 
-module.exports = (db) => {
+module.exports = (router, db) => {
   router.get("/", (req, res) => {
-    db.query(`SELECT * FROM users;`)
+    db.query(`SELECT * FROM categories;`)
       .then(data => {
-        const users = data.rows;
-        res.json({ users });
+        const categories = data.rows;
+        console.log("ROUTE DATA", categories);
+        res.json(categories);
       })
       .catch(err => {
         res
