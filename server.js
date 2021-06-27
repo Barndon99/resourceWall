@@ -41,7 +41,7 @@ const categoryRoutes = require("./routes/categories");
 //app.use("/api/users", usersRoutes(db));
 
 // Note: mount other resources here, using the same pattern above
-app.use("/api/categories", categoryRoutes(db))
+// app.use("/api/categories", categoryRoutes(db))
 
 // Home page
 // Warning: avoid creating more routes in this file!

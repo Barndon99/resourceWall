@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  alert("hello");
+
   const renderCategories = function() {
 
   }
