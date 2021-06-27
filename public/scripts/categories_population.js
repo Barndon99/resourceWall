@@ -1,8 +1,4 @@
 $(document).ready(function() {
-<<<<<<< HEAD
-
-  const renderCategories = function() {
-=======
   console.log("MADE IT IN");
   //Adds a new DIV containing categories to the DOM
   const renderCategories = function(categories) {
@@ -14,7 +10,6 @@ $(document).ready(function() {
       $('body').append($category);
     }
   };
->>>>>>> refs/remotes/origin/master
 
   const createCategoryElement = function(category) {
     const name = category.name;
