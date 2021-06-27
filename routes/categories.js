@@ -5,16 +5,32 @@
  * See: https://expressjs.com/en/guide/using-middleware.html#middleware.router
  */
 
+const { response } = require('express');
 const express = require('express');
 const router  = express.Router();
 
-module.exports = (router, db) => {
+const categoryRouter = (db) => {
+  //router.get("/", (req, res) => {
+  //  db.query(`SELECT * FROM categories;`)
+  //  .then(response => {
+  //    console.log(response.rows);
+  //    const categories = response.rows;
+  //    for(category of categories) {
+  //      $("<div>").text(category.name).appendTo($("body"));
+  //      }
+  //    })
+  //    .catch(err => {
+  //      res
+  //        .status(500)
+  //        .json({ error: err.message });
+  //    });
+  //});
+
   router.get("/", (req, res) => {
     db.query(`SELECT * FROM categories;`)
-      .then(data => {
-        const categories = data.rows;
-        console.log("ROUTE DATA", categories);
-        res.json(categories);
+    .then(response => {
+      console.log(response);
+      return res.json(response.rows);
       })
       .catch(err => {
         res
@@ -24,3 +40,5 @@ module.exports = (router, db) => {
   });
   return router;
 };
+
+module.exports = categoryRouter;
