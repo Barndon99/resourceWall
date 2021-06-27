@@ -95,3 +95,5 @@ User Page
   -What category is this?
 
 #### STRETCH
+
+We have lots of plans 
