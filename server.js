@@ -41,11 +41,7 @@ const categoryRoutes = require("./routes/categories");
 //app.use("/api/users", usersRoutes(db));
 
 // Note: mount other resources here, using the same pattern above
-<<<<<<< HEAD
-// app.use("/api/categories", categoryRoutes(db))
-=======
 app.use("/api/categories", categoryRoutes(db));
->>>>>>> refs/remotes/origin/master
 
 // Home page //
 // Warning: avoid creating more routes in this file!
