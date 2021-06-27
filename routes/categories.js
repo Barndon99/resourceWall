@@ -10,22 +10,6 @@ const express = require('express');
 const router  = express.Router();
 
 const categoryRouter = (db) => {
-  //router.get("/", (req, res) => {
-  //  db.query(`SELECT * FROM categories;`)
-  //  .then(response => {
-  //    console.log(response.rows);
-  //    const categories = response.rows;
-  //    for(category of categories) {
-  //      $("<div>").text(category.name).appendTo($("body"));
-  //      }
-  //    })
-  //    .catch(err => {
-  //      res
-  //        .status(500)
-  //        .json({ error: err.message });
-  //    });
-  //});
-
   router.get("/", (req, res) => {
     db.query(`SELECT * FROM categories;`)
     .then(response => {

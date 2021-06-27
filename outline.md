@@ -70,4 +70,30 @@ app.get('/login/:id', (req, res) => {
 7. create new resources
 8. create new categories
 
+
+#### QUERIES WE NEED
+Categories Page
+  ->Resource Page (all resources by a category)
+    ->Individual Resource page (panel)
+  ->user page (saved resources)
+
+Categores 
+  -Select all categories
+  -# of resources
+
+ Resources
+  -get all resources by category_id
+  -get resource title
+  -# of times saved
+
+Individual Resource
+  -get resource title, url (take me there button), description, rating
+  -get resource comments with user_id, user_profile_pic, tablestamp
+
+User Page
+  -saved_resources by user
+  -What category is this?
+
 #### STRETCH
+
+We have lots of plans 
