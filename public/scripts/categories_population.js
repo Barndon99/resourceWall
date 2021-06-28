@@ -1,6 +1,6 @@
 //Keep queries in Routes this file should be used to dynamically render EJS
 $(document).ready(function() {
-  console.log("MADE IT IN");
+  var colors = ['red','blue','green','yellow','cyan','orange'];
   //Adds a new DIV containing categories to the DOM
   const renderCategories = function(categories) {
     //$("body").empty();
@@ -8,7 +8,7 @@ $(document).ready(function() {
     for (const category of categories) {
       // calls createCategory for each category
       const $category = createCategoryElement(category);
-      $('body').append($category);
+      $('#categories .container').append($category);
     }
   };
 
@@ -16,7 +16,7 @@ $(document).ready(function() {
     const name = category.name;
 
     const $category = `
-    <div><p>${name}</p></div>
+    <div class="div-color">${name}</div>
     `;
 
     return $category;
@@ -28,8 +28,17 @@ $(document).ready(function() {
       url: "/categories/get"
     }).done(function (data) {
       renderCategories(data);
+      $('.div-color').each(function(){
+        var new_color = colors[Math.floor(Math.random()*colors.length)];
+        var new_color1 = colors[Math.floor(Math.random()*colors.length)];
+        $(this).css({
+          'background-color': new_color,
+          'color': new_color1
+        });
+      });
     });
   };
   loadCategories();
+
 });
 module.exports = { getResourceById };
