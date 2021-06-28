@@ -27,6 +27,11 @@ const categoryRouter = (db) => {
     res.render('index');
   });
 
+  router.get("/:resourceId", (req, res) => {
+    console.log(req.params);
+    res.redirect('/resources/:id');
+  })
+
   return router;
 };
 

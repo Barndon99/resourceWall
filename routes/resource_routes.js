@@ -15,10 +15,15 @@ const resourceRouter = (db) => {
           .json({ error: err.message });
       });
   });
-
+  // Change index to resource page
   router.get("/", (req, res) => {
     res.render('index');
-  })
+  });
+  // Create a new resource (needs a form)
+  //router.post("/new", (req, res) => {
+  //  const
+  //  db.query("INSERT INTO resources")
+  //})
   return router;
 };
 

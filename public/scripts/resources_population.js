@@ -5,7 +5,6 @@ $(document).ready(function() {
     //$("body").empty();
     // loops through categories
     for (const resource of resources) {
-      // calls createCategory for each category
       const $resource = createResourceElement(resource);
       $('body').append($resource);
     }
