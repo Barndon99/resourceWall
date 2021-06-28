@@ -29,6 +29,8 @@ CREATE TABLE resources (
   id SERIAL PRIMARY KEY NOT NULL,
   category_id INTEGER REFERENCES categories(id) ON DELETE CASCADE,
   owner_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  title TEXT,
+  description TEXT,
   url VARCHAR(500) NOT NULL,
   resource_img_url VARCHAR(500) NOT NULL,
   timestamp TIMESTAMP
