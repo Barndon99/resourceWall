@@ -1,0 +1,13 @@
+body {
+  background-color: #EEE;
+}
+
+body h1 {
+  color: #244751;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
