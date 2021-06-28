@@ -15,7 +15,6 @@
   padding: 6rem;
 }
 
-
 .container > div {
   height: 200px;
   /* border: 3px solid #010101; */
@@ -80,7 +79,9 @@
   box-shadow: 5px 20px #57bfda;
 }
 
-
+.index-background-image {
+  background-image: url("/images/dots.png");
+}
 .text-outline {
   font-family: Bungee;
   font-size: 5rem;
@@ -97,3 +98,18 @@
   border-radius: 20px;
   border: 5px solid #000000;
 } */
+
+
+.colors {
+
+
+ font: #57bfda;
+ font:#00a651;
+ font:#ff0d19;
+ font:#f0d214;
+ font:#44bead;
+ font:#a491c5;
+ font: #71d0f6;
+ font: #ee1ce0;
+}
+  /* var fontColors = ['#57bfda','#00a651','#f0d214','#44bead','#a491c5', '#71d0f6', '#ee1ce0']; */
