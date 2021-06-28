@@ -1,6 +1,25 @@
-const someString = "Some change here";
+const { response } = require('express');
+const express = require('express');
+const router  = express.Router();
 
-const anotherSting = "Another Change here";
+const resourceRouter = (db) => {
+  router.get("/get", (req, res) => {
+    db.query(`SELECT * FROM resources;`)
+    .then(response => {
+      console.log(response);
+      return res.json(response.rows);
+      })
+      .catch(err => {
+        res
+          .status(500)
+          .json({ error: err.message });
+      });
+  });
 
+  router.get("/", (req, res) => {
+    res.render('index');
+  })
+  return router;
+};
 
-const anotherAnotherAnotherSting = "Another change, about the same size";
+module.exports = resourceRouter;

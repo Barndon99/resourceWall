@@ -1,3 +1,4 @@
+//Keep queries in Routes this file should be used to dynamically render EJS
 $(document).ready(function() {
   console.log("MADE IT IN");
   //Adds a new DIV containing categories to the DOM
@@ -24,13 +25,11 @@ $(document).ready(function() {
   const loadCategories = function() {
     $.ajax({
       type: "GET",
-      url: "/api/categories/"
+      url: "/categories/get"
     }).done(function (data) {
       renderCategories(data);
     });
   };
   loadCategories();
 });
-//Keep queries in Routes this file should be used to dynamically render EJS
-
 module.exports = { getResourceById };

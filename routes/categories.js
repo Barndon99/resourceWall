@@ -10,7 +10,7 @@ const express = require('express');
 const router  = express.Router();
 
 const categoryRouter = (db) => {
-  router.get("/", (req, res) => {
+  router.get("/get", (req, res) => {
     db.query(`SELECT * FROM categories;`)
     .then(response => {
       console.log(response);
@@ -22,6 +22,11 @@ const categoryRouter = (db) => {
           .json({ error: err.message });
       });
   });
+
+  router.get("/", (req, res) => {
+    res.render('index');
+  });
+
   return router;
 };
 
