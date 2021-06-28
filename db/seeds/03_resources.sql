@@ -22,7 +22,7 @@ VALUES
 (3, 3, 'Sort an Array in JS', 'default description', 'https://www.freecodecamp.org/news/javascript-array-sort-tutorial-how-to-use-js-sort-methods-with-code-examples/', 'https://res.cloudinary.com/practicaldev/image/fetch/s--EbBBF847--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.techagilist.com/wp-content/uploads/2018/06/Sort.png', current_timestamp),
 (3, 4, 'Compare Objects in JS', 'default description', 'https://dmitripavlutin.com/how-to-compare-objects-in-javascript/#comments', 'https://dmitripavlutin.com/static/28536a7466b2eec72b7c20040478860b/05127/cover-3.png', current_timestamp),
 (3, 5, 'Using settimeout', 'default description', 'https://www.geeksforgeeks.org/how-to-implement-a-function-that-enable-another-function-after-specified-time-using-javascript/', 'https://cdn.educba.com/academy/wp-content/uploads/2020/02/javascript-settimeout.jpg', current_timestamp),
-(3, 2, 'JS OOP', 'default description', 'https://exploringjs.com/es6/ch_oop-besides-classes.html#_property-value-shorthands-1', 'https://hackernoon.com/hn-images/1*XlnVJQ392USdQuQcdyvJ4w.png', current_timestamp);
+(3, 2, 'JS OOP', 'default description', 'https://exploringjs.com/es6/ch_oop-besides-classes.html#_property-value-shorthands-1', 'https://hackernoon.com/hn-images/1*XlnVJQ392USdQuQcdyvJ4w.png', current_timestamp),
 
 -- HTML/CSS
 (4, 1, 'You Should Use SCSS', 'default description', 'https://sass-lang.com/guide', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1200px-Sass_Logo_Color.svg.png', current_timestamp),
@@ -30,7 +30,7 @@ VALUES
 (4, 4, 'CSS Specificity', 'default description', 'https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/', 'https://static.javatpoint.com/csspages/images/css-specificity.png', current_timestamp),
 (4, 5, 'How to Flexbox', 'default description', 'https://css-tricks.com/snippets/css/a-guide-to-flexbox/', 'https://labs.tadigital.com/wp-content/uploads/2020/06/featured-image.jpg', current_timestamp),
 (4, 2, 'CSS in Chrome DevTools', 'default description', 'https://developer.chrome.com/docs/devtools/css/', 'https://i.ytimg.com/vi/T05MBbDz5FU/maxresdefault.jpg', current_timestamp),
-(4, 1, 'Methods for Sizing Elements', 'default description', 'https://www.futurehosting.com/blog/web-design-basics-rem-vs-em-vs-px-sizing-elements-in-css/', 'https://labs.tadigital.com/wp-content/uploads/2019/04/PX-vs-EM-vs-REM.jpg', current_timestamp);
+(4, 1, 'Methods for Sizing Elements', 'default description', 'https://www.futurehosting.com/blog/web-design-basics-rem-vs-em-vs-px-sizing-elements-in-css/', 'https://labs.tadigital.com/wp-content/uploads/2019/04/PX-vs-EM-vs-REM.jpg', current_timestamp),
 
 -- Node.js
 (5, 3, 'Node Guide', 'default description', 'https://nodejs.dev/learn', 'https://miro.medium.com/max/640/1*Ji2aazMsFhKEa8ohgcJh5g.jpeg', current_timestamp),
@@ -38,7 +38,7 @@ VALUES
 (5, 1, 'fs Data Options', 'default description', 'https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback', 'https://s3.stackabuse.com/media/articles/7bc9c6ac155e0f92998a5b9f85c101a9.png', current_timestamp),
 (5, 4, 'Write File', 'default description', 'https://nodejs.dev/learn/writing-files-with-nodejs', 'https://www.codegrepper.com/codeimages/node-js-fs-write-file.png', current_timestamp),
 (5, 5, 'Error Handling', 'default description', 'https://www.smashingmagazine.com/2020/08/error-handling-nodejs-error-classes/', 'https://miro.medium.com/max/1050/1*DUVmt95eQTNvy0XNYtN-LQ.png', current_timestamp),
-(5, 1, 'Create a server', 'default description', 'https://www.guru99.com/node-js-create-server-get-data.html', 'https://www.guru99.com/images/NodeJS/010716_0600_NodejsHttpT2.png', current_timestamp);
+(5, 1, 'Create a server', 'default description', 'https://www.guru99.com/node-js-create-server-get-data.html', 'https://www.guru99.com/images/NodeJS/010716_0600_NodejsHttpT2.png', current_timestamp),
 
 -- Databases
 (6, 5, 'Postgres vs Others', 'default description', 'https://www.datacamp.com/community/blog/sql-differences', 'https://cdn.educba.com/academy/wp-content/uploads/2018/12/SQL-Server-vs-PostgreSQL.jpg', current_timestamp),
