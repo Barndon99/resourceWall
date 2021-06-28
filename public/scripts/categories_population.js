@@ -15,9 +15,9 @@ $(document).ready(function() {
 
   const createCategoryElement = function(category) {
     const name = category.name;
-
+    const url = `/resources`;
     const $category = `
-    <div class="div-color">${name}</div>
+    <a href=${url}><div class="div-color">${name}</div><a href="">
     `;
 
     return $category;
