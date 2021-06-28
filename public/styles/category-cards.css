@@ -1,0 +1,99 @@
+.category-container {
+  z-index: 1;
+  position: relative;
+  padding-top: 60px;
+  padding-left: 60px;
+
+}
+
+/* container on the index.ejs */
+.container {
+  display: grid;
+  grid-gap: 100px;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 5px;
+  padding: 6rem;
+}
+
+
+.container > div {
+  height: 200px;
+  /* border: 3px solid #010101; */
+  border-radius: 5px;
+}
+
+.git-card {
+  background-color: #57bfda;
+  background-image: url("/images/dots.png");
+  color: #00a651;
+}
+.git-card:hover {
+  box-shadow: 5px 20px #ff0d19;
+}
+
+
+.html-card {
+  background-color: #ff0d19;
+  color: #57bfda ;
+  background-image: url("/images/dots.png");
+}
+.html-card:hover {
+  box-shadow: 5px 20px rgba(255, 174, 0, 0.831);
+}
+
+
+.css-card {
+  background-color: rgba(255, 174, 0, 0.831);
+  color: mediumslateblue;
+  background-image: url("/images/dots.png");
+}
+.css-card:hover {
+  box-shadow: 5px 20px #57bfda;
+}
+
+
+.java-script-card {
+  background-color: mediumslateblue;
+  color: rgba(255, 174, 0, 0.831);
+  background-image: url("/images/dots.png");
+}
+.java-script-card:hover {
+  box-shadow: 5px 20px #57bfda;
+}
+
+
+.random-card {
+  background-color: #00a651;
+  background-image: url("/images/dots.png");
+  color:#ff0d19;
+}
+.random-card:hover {
+  box-shadow: 5px 20px #ee1ce0;
+}
+
+.random-card2 {
+  background-color: #ee1ce0;
+  background-image: url("/images/dots.png");
+  color:mediumslateblue;
+}
+.random-card2:hover {
+  box-shadow: 5px 20px #57bfda;
+}
+
+
+.text-outline {
+  font-family: Bungee;
+  font-size: 5rem;
+  text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px, rgb(0, 0, 0) 2.35766px 1.85511px 0px, rgb(0, 0, 0) 1.62091px 2.52441px 0px, rgb(0, 0, 0) 0.705713px 2.91581px 0px, rgb(0, 0, 0) -0.287171px 2.98622px 0px, rgb(0, 0, 0) -1.24844px 2.72789px 0px, rgb(0, 0, 0) -2.07227px 2.16926px 0px, rgb(0, 0, 0) -2.66798px 1.37182px 0px, rgb(0, 0, 0) -2.96998px 0.42336px 0px, rgb(0, 0, 0) -2.94502px -0.571704px 0px, rgb(0, 0, 0) -2.59586px -1.50383px 0px, rgb(0, 0, 0) -1.96093px -2.27041px 0px, rgb(0, 0, 0) -1.11013px -2.78704px 0px, rgb(0, 0, 0) -0.137119px -2.99686px 0px, rgb(0, 0, 0) 0.850987px -2.87677px 0px, rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px, rgb(0, 0, 0) 2.88051px -0.838247px 0px;
+
+}
+
+/* .category-title-box {
+  position: absolute;
+  background-color: white;
+  height: 10rem;
+  width: 10rem;
+  z-index: 3;
+  border-radius: 20px;
+  border: 5px solid #000000;
+} */
