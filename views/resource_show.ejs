@@ -14,17 +14,29 @@
 
 <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
 <script type="text/javascript" src="/scripts/app.js"></script>
-<!-- Might do something eventually -->
-<script type="text/javascript" src="/scripts/categories_population.js"></script>
+<!-- Generate comments -->
+<script type="text/javascript" src="/scripts/generate_comments.js"></script>
 </head>
 <!-- Top nav bar (fixed) -->
   <%- include('partials/_header.ejs') %>
   <body>
     <section id="categories-display">
     <div class="categories-container">
-      <!-- Just making sure you have all the data you need! -->
-      <p><%= resource.id %></p>
-      <div>Comments will appear here</div>
+      <img src="<%- resource[0].resource_img_url %>" class="left-column">
+      <div class="middle-column">
+        <h4><%- resource[0].title %></h4>
+        <p><%- resource[0].description %></p>
+        <a href="<%- resource[0].url %>"><p><%= resource[0].url%></p></a>
+      </div>
+      <!-- This will be auto filled using JQuery -->
+      <div class="comment-container">
+        <% for(let ele of resource) { %>
+          <div class="comment">
+            <p><%= ele.comments %></p>
+            <p><%= ele.name %></p>
+          </div>
+        <% } %>
+      </div>
     </div>
   </body>
 
