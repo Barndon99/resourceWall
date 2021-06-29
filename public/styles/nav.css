@@ -20,9 +20,9 @@
 }
 
 .flash-light {
-  transform: rotate(0deg);
-  margin: -6rem;
-  margin: -6rem;
+  transform: rotate(180deg);
+  margin: -3rem;
+  margin: -3rem;
   z-index: 4;
 
 }
