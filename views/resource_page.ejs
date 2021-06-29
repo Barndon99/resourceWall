@@ -8,21 +8,81 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&family=Bungee+Shade&family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+
+
 <!-- Internal style sheets -->
 <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-
+<link rel="stylesheet" href="/styles/resource-group.css" type="text/css" />
+<link rel="stylesheet" href="/styles/main-layout.css" type="text/css" />
 <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
 <script type="text/javascript" src="/scripts/app.js"></script>
+
 <!-- Might do something eventually -->
-<script type="text/javascript" src="/scripts/resources_population.js"></script>
+<!-- <script type="text/javascript" src="/scripts/resources_population.js"></script> -->
 </head>
 <!-- Top nav bar (fixed) -->
   <%- include('partials/_header.ejs') %>
+<<<<<<< HEAD
+  <body class="main-body ">
+
+    <span class="text-outline title">GITHUB</span>
+    <div class="wrapper">
+      <div class="git-card text-outline" id="article-title">Git Zero This is a title and maybe a long one just to see"
+        <br><br>
+        <div class="rating-box">
+          <div class="rating" style="width:30%;"></div>
+      </div>
+      </div>
+
+      <div class="git-card text-outline" id="article-title">Interesting
+        <br><br>
+        <div class="rating-box">
+          <div class="rating" style="width:80%;"></div>
+      </div>
+      </div>
+
+      <div class="git-card text-outline" id="article-title">how to escape your branch
+        <br><br>
+        <div class="rating-box">
+          <div class="rating" style="width:90%;"></div>
+      </div>
+      </div>
+
+      <div class="git-card text-outline" id="article-title">you're first checkout
+        <br><br>
+        <div class="rating-box">
+          <div class="rating" style="width:40%;"></div>
+      </div>
+      </div>
+
+      <div class="git-card text-outline" id="article-title">git life
+        <br><br>
+        <div class="rating-box">
+          <div class="rating" style="width:50%;"></div>
+      </div>
+      </div>
+
+      <div class="git-card text-outline" id="article-title">great checkout
+        <br><br>
+        <div class="rating-box">
+          <div class="rating" style="width:50%;"></div>
+      </div>
+      </div>
+  </div>
+
+=======
   <body>
     <section class="container">
-
+      <% for(const resource of resources) { %>
+        <a href="../resources/<%- resource.id %>">
+          <div><%= resource.title %></div>
+          <div><%= resource.ratings %></div>
+        </a>
+      <% } %>
     </section>
+>>>>>>> 69bd74d82553ee350609438a6d080f83e4b696a1
   </body>
 
 

@@ -1,4 +1,4 @@
-//Keep queries in Routes this file should be used to dynamically render EJS
+//This needs to be added to the <script> tags within users .ejs page
 $(document).ready(function() {
   //Adds a new DIV containing categories to the DOM
   const renderSavedResources = function(savedResources) {
@@ -6,7 +6,7 @@ $(document).ready(function() {
     // loops through resources
     for (const resource of savedResources) {
       const $savedResource = createSavedResourceElement(resource);
-      //This query will need to target the owned resources container
+      //This query will need to target the saved resources container
       $('body').append($savedResource);
     }
   };
@@ -33,5 +33,5 @@ $(document).ready(function() {
       renderSavedResources(data);
     });
   };
-  loadSavedResources();s
+  loadSavedResources();
 });

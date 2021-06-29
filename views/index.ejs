@@ -22,7 +22,12 @@
   <!-- Top nav bar (fixed) -->
   <%- include('partials/_header.ejs') %>
   <body class="main-body main-background-img text-outline">
-    <section id="categories" >
-    <div class="container" ></div>
+    <section id="categories">
+    <div class="container" >
+      <% for(const category of categories) { %>
+       <a href="/categories/<%- category.id %>"><div class="div-color"><%= category.name %></div><a>
+      <% } %>
+    </div>
+    </section>
 </body>
 </html>
