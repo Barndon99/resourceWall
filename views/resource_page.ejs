@@ -20,10 +20,11 @@
 <script type="text/javascript" src="/scripts/app.js"></script>
 
 <!-- Might do something eventually -->
-<script type="text/javascript" src="/scripts/resources_population.js"></script>
+<!-- <script type="text/javascript" src="/scripts/resources_population.js"></script> -->
 </head>
 <!-- Top nav bar (fixed) -->
   <%- include('partials/_header.ejs') %>
+<<<<<<< HEAD
   <body class="main-body ">
 
     <span class="text-outline title">GITHUB</span>
@@ -71,6 +72,17 @@
       </div>
   </div>
 
+=======
+  <body>
+    <section class="container">
+      <% for(const resource of resources) { %>
+        <a href="../resources/<%- resource.id %>">
+          <div><%= resource.title %></div>
+          <div><%= resource.ratings %></div>
+        </a>
+      <% } %>
+    </section>
+>>>>>>> 69bd74d82553ee350609438a6d080f83e4b696a1
   </body>
 
 

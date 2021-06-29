@@ -20,18 +20,11 @@ const resourceRouter = (db) => {
     res.render('resource_page');
   });
 
-  router.get("/:id", (req, res) => {
-    console.log("PARAMS", req.params.id);
-    db.query(`SELECT * FROM resources JOIN categories ON resources.category_id = categories.id WHERE categories.id = ${req.params.id};`)
-      .then((response) => {
-        return res.json(response.rows);
-      })
-  })
-  // Create a new resource (needs a form)
-  //router.post("/new", (req, res) => {
-  //  const
-  //  db.query("INSERT INTO resources")
+  //router.get("/:id", (req, res) => {
+  //  console.log("PARAMS", req.params.id);
+  //  db.query('SELECT * FROM resources WHERE resources.id = ')
   //})
+
   return router;
 };
 
