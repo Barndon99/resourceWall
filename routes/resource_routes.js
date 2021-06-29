@@ -21,11 +21,10 @@ const resourceRouter = (db) => {
     db.query(`SELECT * FROM resource_comments WHERE resource_comments.resource_id = ${resourceId};`)
     .then(response => {
       console.log(response);
-      return res.json(response.rows);
+      res.json(response.rows);
       })
       .catch(err => {
         res
-          .status(500)
           .json({ error: err.message });
       });
   });
