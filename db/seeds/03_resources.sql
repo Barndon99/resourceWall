@@ -4,9 +4,9 @@ VALUES
 (1, 3, 'Git for beginners', 'default description', 'https://launchschool.com/books/git/read/introduction', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.techrepublic.com%2Farticle%2Fgit-everything-the-pros-need-to-know%2F&psig=AOvVaw0ABZ0ay6r07jD2GDFsh0jb&ust=1624821155787000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCJjP99WAtvECFQAAAAAdAAAAABAP', current_timestamp),
 (1, 2, 'Git reference', 'default description', 'https://git-scm.com/docs', 'https://git-scm.com/images/logo@2x.png', current_timestamp),
 (1, 1, 'Git Zero to Hero', 'default description', 'https://www.codecademy.com/learn/learn-git', 'https://images.codecademy.com/social/logo-codecademy-social.png', current_timestamp),
-(1, 4, 'How to install git within VScode', '', 'https://www.jcchouinard.com/install-git-in-vscode/', 'https://www.deployhq.com/attachment/d1974dd4-b8f9-46fe-9491-99e0b0cc5111/thumb1400.png', current_timestamp),
+(1, 4, 'How to install git within VScode', 'default description', 'https://www.jcchouinard.com/install-git-in-vscode/', 'https://www.deployhq.com/attachment/d1974dd4-b8f9-46fe-9491-99e0b0cc5111/thumb1400.png', current_timestamp),
 (1, 4, 'Git guide to branches', 'default description', 'https://www.atlassian.com/git/tutorials/using-branches', 'https://www.nobledesktop.com/image/gitresources/git-branches-merge.png', current_timestamp),
-(1, 5, 'Difference between Git and Github', '', 'https://www.theserverside.com/video/Git-vs-GitHub-What-is-the-difference-between-them', 'http://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/12/git-vs-github4.png', current_timestamp),
+(1, 5, 'Difference between Git and Github', 'default description', 'https://www.theserverside.com/video/Git-vs-GitHub-What-is-the-difference-between-them', 'http://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/12/git-vs-github4.png', current_timestamp),
 
 -- VIM
 (2, 2, 'Vim keyboard shortcuts', 'default description', 'http://www.viemu.com/vi-vim-cheat-sheet.gif', 'https://lh3.googleusercontent.com/proxy/u3z2eHUC_uPqoO7cTNZ5EicN_9MmQ3nGe0Hnn9XfkHtLIDzd1lMRjNY4VOmVkERUVssXhJMfAJP6LgpOoOkfu6i0VRb0zfYCLV14OFawHZlTyWv2LP4Sv2-C7MdurgZdeUN7Cv-UN1Y3DAbW0L7Z3IQ' , current_timestamp),
