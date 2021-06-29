@@ -26,6 +26,7 @@ const resourceRouter = (db) => {
   //})
 
   return router;
+  // small comment
 };
 
 module.exports = resourceRouter;
