@@ -16,8 +16,15 @@ const resourceRouter = (db) => {
       });
   });
   // Change index to resource page
-  router.get("/", (req, res) => {
-    res.render('resource_page');
+  router.get("/:id", (req, res) => {
+    const id = req.params.id;
+    db.query(`SELECT * FROM resources WHERE resources.category_id = ${id}`)
+    .then((response) => {
+      console.log(response.rows);
+      const templateVars = {resource: response.rows}
+      res.render('resource_show', templateVars);
+    });
+    //res.render('resource_page');
   });
 
   //router.get("/:id", (req, res) => {

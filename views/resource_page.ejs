@@ -27,9 +27,10 @@
   <body class="main-body ">
 
     <span class="text-outline title">GITHUB</span>
-
+    <!-- Route needs to be adjusted to grab resource_id-->>
     <% for(const resource of resources) { %>
-    <div class="wrapper">
+    <a href="/resources/<%- resource.resource_id %>">
+      <div class="wrapper">
       <div class="git-card text-outline" id="article-title"><%= resource.title%>
         <br><br>
         <div class="rating-box">
@@ -37,6 +38,7 @@
       </div>
       </div>
     </div>
+    </a>>
     <% } %>
 </body>
 </html>
