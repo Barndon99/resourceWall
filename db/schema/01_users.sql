@@ -58,3 +58,11 @@ CREATE TABLE resource_comments (
   comments VARCHAR(255) NOT NULL,
   timestamp TIMESTAMP
 );
+
+
+\i db/seeds/01_users.sql
+\i db/seeds/02_categories.sql
+\i db/seeds/03_resources.sql
+\i db/seeds/04_user_resources.sql
+\i db/seeds/06_resource_ratings.sql
+\i db/seeds/07_resource_comments.sql
