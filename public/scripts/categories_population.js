@@ -9,7 +9,7 @@ $(document).ready(function() {
     $(this).css({
       'background-color': new_color,
       'color': new_color1,
-      'background-image': `url(${"/images/dots.png"})`
+      'background-image': `url(${"/images/dots.png"})`,
     });
   });
 
