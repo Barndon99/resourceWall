@@ -7,7 +7,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: 200px;
   border-radius: 5px;
   padding: 6rem;
@@ -22,15 +22,16 @@
 
 .git-card {
   background-color: #57bfda;
-  /* background-image: url("/images/dots.png"); */
+  background-image: url("/images/cloud/0.5x/Artboard 10.5.png");
   color: #00a651;
+  font-size: 2.7em;
 }
 
 .git-card:hover {
   box-shadow: 5px 20px #ff0d19;
 }
 
-/* .git-card:hover {
+ /* .git-card:hover {
   background-image: url("/images/square-speech/0.5x/smallArtboard 10.5.png");
 } */
 
