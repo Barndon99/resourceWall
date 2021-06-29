@@ -5,8 +5,8 @@
 <!-- External CSS -->
 <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&family=Bungee+Shade&family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
 
@@ -27,14 +27,14 @@
   <body class="main-body ">
 
     <span class="text-outline title"><%= resources[0].name %></span>
-    <!-- Route needs to be adjusted to grab resource_id-->>
+    <!-- Route needs to be adjusted to grab resource_id-->
     <% for(const resource of resources) { %>
     <a href="/resources/<%- resource.resid %>">
       <div class="wrapper">
       <div class="git-card text-outline" id="article-title"><%= resource.title%>
         <br><br>
         <div class="rating-box">
-          <div class="rating" style=<%- `'width:${((resource.ratings / 5) * 100)}%'`%>>
+          <div class="rating" style=<%- 'width:${((resource.ratings / 5) * 100)}%'%>>
           </div>
       </div>
       </div>
