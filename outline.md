@@ -1,43 +1,52 @@
 # Resource Wall
-* users should be able to save an external URL along with a title and description
-* users should be able to search for already-saved resources created by any user
-* users should be able to categorize any resource under a topic
-* users should be able to comment on any resource
-* users should be able to rate any resource
-* users should be able to like any resource
-* users should be able to view all their own and all liked resources on one page ("My resources")
-* users should be able to register, log in, log out and update their profile
+
+**For mid-terms, we want to focus on the MVD, the Minimum Viable Demo. If you aren't going to demo it, don't build it**
+
+- [] users should be able to save an external URL along with a title and description
+- [] users should be able to search for already-saved resources created by any user
+- [] users should be able to categorize any resource under a topic
+- [] users should be able to comment on any resource
+- [] users should be able to rate any resource
+- [] users should be able to like any resource
+- [] users should be able to view all their own and all liked resources on one page ("My resources")
+- [] users should be able to register, log in, log out and update their profile
 
 ## User Stories
 
-`Describe how users will interact with you application`
+***Describe how users will interact with you application***
 
-As a avid learner I want to efficiently access the useful resources I have currated over the years for my various hobbies, because I want to be able to refference them and share them with like minded individuals. 
+* As a user and avid learner I want to efficiently access the useful resources I have currated over the years for my various hobbies, because I want to be able to refference them and share them with like minded individuals. 
 
-Bookmarks just don't suffice because I need more descriptive organization for my resources. 
+* As a user I recognize that bookmarks just don't suffice and I need more descriptive organization for my resources. 
 
-As user I need to be able to save an external URL along with title, description and category because I want to share them with peers.
+* As user I need to be able to `save` an external `URL` along with `title`, `description` and `category` because I want to share them with peers.
 
-As a logged in user I need to be able find saved resources by any user because I wish to access those saved resources.
+* As a logged in user I need to be able find saved resources by any user because I wish to access those saved resources.
 
-As a logged in user I need to find saved resources by category, because I want to find resources pertaining to my interests.
+* As a logged in user I need to find saved resources by category, because I want to find resources pertaining to my interests.
 
-As a logged in user I need to comment on any resource because I want my thoughts to be known (this will help you with ____).
+* As a logged in user I need to `comment` on any resource because I want my thoughts to be known (this will help you with ____).
 
-As a logged in user I need to rate any resource because I want to let others know how helpful/unhelpful/suggestions it was.
+* As a logged in user I need to `rate` any resource because I want to let others know how helpful/unhelpful/suggestions it was.
 
-As a logged in user I need to like any resource because others should know the popularity of the resource.
+* As a logged in user I need to `like` any resource because others should know the popularity of the resource.
 
-As a logged in user I need to view my liked and created resources because I want easily access and store my resources
+* As a logged in user I need to view my liked and created resources because I want easily access and store my resources
 
-I want to register, login, logout and update my profile because my info can change and I wish to protect my saved resources. 
+* As a logged in user I want to `register`, `login`, `logout` and `update` my profile because my info can change and I wish to protect my saved resources. 
 
+## User Scenarios
 
-## Entities
+*
+*
+*
+* 
+
+## ERD/Entities
 
 1. `users`: id, name, email, password, profile_img_url
 
-2. `resources`: id, category_id, owner_id(user_id), url, resource_img_url
+2. `resources`: id, category_id, owner_id(user_id), title, description, url, resource_img_url
 
 3. `users_resources`: id, user_id(guest_id), resource_id
 
@@ -46,12 +55,6 @@ I want to register, login, logout and update my profile because my info can chan
 5. `resources_comments`: id, user_id(guest_id), resource_id, comments
 
 6. `categories`: id, name, category_img_url, number_of_resources
-
-### times_saved
-SELECT resources, COUNT(users_resources)
-JOIN users_resources
-JOIN users
-WHERE users_resources.resource_id = resources.id 
 
 To Do:
 
@@ -97,3 +100,82 @@ User Page
 #### STRETCH
 
 We have lots of plans 
+
+
+```SQL
+-- categories --
+SELECT * FROM categories;
+
+-- this counts the number of resources in each category
+SELECT categories.name as category, COUNT(resources.*) as num_of_resources
+FROM resources 
+JOIN categories ON resources.category_id = categories.id
+GROUP BY categories.name;
+
+-- resources --
+SELECT * FROM resources 
+
+-- this gets all the urls displayed by their category id
+SELECT resources.url as link, categories.id as category_id
+FROM resources
+JOIN categories ON categories.id = category_id
+ORDER BY categories.id;
+
+-- this groups the resources urls by category name
+SELECT resources.url as link, categories.name as category
+FROM resources
+JOIN categories ON categories.id = category_id
+ORDER BY categories.name;
+
+-- atm resources don't have a name/title so just used url
+-- this counts the times a resource was saved
+SELECT resources.id, COUNT(users_resources.resource_id) as times_saved, resources.url
+FROM resources
+JOIN users_resources ON resources.id = users_resources.resource_id
+GROUP BY resources.id
+ORDER BY times_saved DESC;
+
+-- Individual Resource --
+-- resources don't have a description and no title.
+
+SELECT resources.url as link, 
+resource_ratings.rating as rating, 
+users.name as rating_owner
+FROM resources 
+JOIN resource_ratings ON resources.id = resource_id
+JOIN users ON resource_ratings.owner_id = users.id
+ORDER BY rating DESC;
+
+-- this shows the comment on a specific resource at a 
+-- specifc time by a specific user with a profile pic
+SELECT resource_comments.comments as comment,
+resource_comments.timestamp as time,
+resource_comments.resource_id as resource,
+users.name as user,
+users.profile_image as img
+FROM resource_comments
+JOIN users ON resource_comments.guest_id = users.id;
+
+-- User Page
+
+SELECT resources.*
+FROM resources
+JOIN users ON users.id = resources.owner_id
+WHERE users.id = 3;
+
+-- How to query owner and guest at the same time?
+-- I think we need to update the database as the
+-- query is not no working properly for the last
+-- 2 users
+SELECT users.name, 
+users.id as saver_id, 
+resources.url as saved_link,
+categories.name as category,
+users_resources.timestamp as time_of_save,
+resources.owner_id as owner_id
+FROM resources
+JOIN users_resources ON resources.id = users_resources.resource_id
+JOIN users ON users.id = users_resources.guest_id
+JOIN categories ON categories.id = resources.category_id
+WHERE users.id = 4;
+```
