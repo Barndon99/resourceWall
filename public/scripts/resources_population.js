@@ -26,7 +26,7 @@ $(document).ready(function() {
   const loadResources = function() {
     $.ajax({
       type: "GET",
-      url: "/resources/1"
+      url: "/resources/"
     }).done(function (data) {
       renderResources(data);
     });

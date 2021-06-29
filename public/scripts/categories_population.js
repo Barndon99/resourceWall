@@ -3,6 +3,7 @@ $(document).ready(function() {
   var mainColors = ['#00a651', '#a491c5', '#71d0f6', '#44bead', '#57bfda', '#e5d5c1', '#affaaf', '#6015a1', '#ff99ff', '#99ffcc', '#82063c', '#210fee', '#f61eb7', '#c8f464', '#59ec53'];
   var fontColors = ['#57bfda','#00a651','#ff0d19','#f0d214','#44bead', '#71d0f6', '#ee1ce0'];
   //Adds a new DIV containing categories to the DOM
+  console.log("IS THIS WORKING");
   const renderCategories = function(categories) {
     //$("body").empty();
     // loops through categories
@@ -15,9 +16,10 @@ $(document).ready(function() {
 
   const createCategoryElement = function(category) {
     const name = category.name;
-    const url = `/resources`;
+    const id = category.id;
+
     const $category = `
-    <a href=${url}><div class="div-color">${name}</div><a href="">
+    <a href="/categories/${id}/resources"><div class="div-color">${name}</div><a>
     `;
 
     return $category;
@@ -50,6 +52,4 @@ $(document).ready(function() {
     });
   };
   loadCategories();
-
 });
-module.exports = { getResourceById };

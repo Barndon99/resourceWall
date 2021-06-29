@@ -15,13 +15,16 @@
 <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
 <script type="text/javascript" src="/scripts/app.js"></script>
 <!-- Might do something eventually -->
-<script type="text/javascript" src="/scripts/resources_population.js"></script>
+<!-- <script type="text/javascript" src="/scripts/resources_population.js"></script> -->
 </head>
 <!-- Top nav bar (fixed) -->
   <%- include('partials/_header.ejs') %>
   <body>
     <section class="container">
-
+      <% for(const resource of resources) { %>
+        <div><%= resource.title %></div>
+        <div><%= resource.ratings %></div>
+      <% } %>
     </section>
   </body>
 

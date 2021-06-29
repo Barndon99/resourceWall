@@ -1,4 +1,4 @@
-//Keep queries in Routes this file should be used to dynamically render EJS
+//This needs to be added to the users .ejs page
 $(document).ready(function() {
   //Adds a new DIV containing categories to the DOM
   const renderOwnedResources = function(ownedResources) {
