@@ -26,62 +26,19 @@
   <%- include('partials/_header.ejs') %>
   <body class="main-body ">
 
-    <span class="text-outline title">GITHUB</span>
-    <div class="wrapper">
-      <div class="git-card text-outline" id="article-title">Git Zero This is a title and maybe a long one just to see"
+    <span class="text-outline title"><%= resources[0].name %></span>
+    <!-- Route needs to be adjusted to grab resource_id-->>
+    <% for(const resource of resources) { %>
+    <a href="/resources/<%- resource.resource_id %>">
+      <div class="wrapper">
+      <div class="git-card text-outline" id="article-title"><%= resource.title%>
         <br><br>
         <div class="rating-box">
-          <div class="rating" style="width:30%;"></div>
+          <div class="rating" style=<%- `'width:${((resource.ratings / 5) * 100)}%'`%>></div>
       </div>
       </div>
-
-      <div class="git-card text-outline" id="article-title">Interesting
-        <br><br>
-        <div class="rating-box">
-          <div class="rating" style="width:80%;"></div>
-      </div>
-      </div>
-
-      <div class="git-card text-outline" id="article-title">how to escape your branch
-        <br><br>
-        <div class="rating-box">
-          <div class="rating" style="width:90%;"></div>
-      </div>
-      </div>
-
-      <div class="git-card text-outline" id="article-title">you're first checkout
-        <br><br>
-        <div class="rating-box">
-          <div class="rating" style="width:40%;"></div>
-      </div>
-      </div>
-
-      <div class="git-card text-outline" id="article-title">git life
-        <br><br>
-        <div class="rating-box">
-          <div class="rating" style="width:50%;"></div>
-      </div>
-      </div>
-
-      <div class="git-card text-outline" id="article-title">great checkout
-        <br><br>
-        <div class="rating-box">
-          <div class="rating" style="width:50%;"></div>
-      </div>
-      </div>
-  </div>
-
-  <body>
-    <section class="container">
-      <% for(const resource of resources) { %>
-        <a href="../resources/<%- resource.id %>">
-          <div><%= resource.title %></div>
-          <div><%= resource.ratings %></div>
-        </a>
-      <% } %>
-    </section>
-  </body>
-
-
+    </div>
+    </a>>
+    <% } %>
 </body>
 </html>

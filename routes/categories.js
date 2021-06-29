@@ -27,14 +27,14 @@ const categoryRouter = (db) => {
   router.get("/:id", (req, res) => {
     const id = req.params.id;
     console.log("ID", id);
-    db.query(`SELECT resources.category_id as id, avg(resource_ratings.rating) as ratings, resources.title as title
+    db.query(`SELECT resources.category_id as id, avg(resource_ratings.rating) as ratings, resources.title as title, categories.name as name
     FROM resources
     JOIN categories
     ON resources.category_id = categories.id
     JOIN resource_ratings
     ON resource_ratings.resource_id = resources.id
     WHERE resources.category_id = ${id}
-    GROUP BY resources.category_id, resources.title;`)
+    GROUP BY resources.category_id, resources.title, categories.name;`)
     .then(response => {
       const templateVars = { resources: response.rows };
       console.log("TEMPLATE VARS:", templateVars);
