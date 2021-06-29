@@ -22,8 +22,10 @@
   <body>
     <section class="container">
       <% for(const resource of resources) { %>
-        <div><%= resource.title %></div>
-        <div><%= resource.ratings %></div>
+        <a href="../resources/<%- resource.id %>">
+          <div><%= resource.title %></div>
+          <div><%= resource.ratings %></div>
+        </a>
       <% } %>
     </section>
   </body>
