@@ -29,7 +29,7 @@
     <span class="text-outline title"><%= resources[0].name %></span>
     <!-- Route needs to be adjusted to grab resource_id-->>
     <% for(const resource of resources) { %>
-    <a href="/resources/<%- resource.resource_id %>">
+    <a href="/resources/<%- resource.resid %>">
       <div class="wrapper">
       <div class="git-card text-outline" id="article-title"><%= resource.title%>
         <br><br>
