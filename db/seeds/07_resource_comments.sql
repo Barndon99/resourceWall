@@ -5,3 +5,4 @@ VALUES (1, 3, 'good comment', current_timestamp),
        (3, 4, 'gnarly comment', current_timestamp),
        (4, 5, 'spectacular comment', current_timestamp),
        (3, 2, 'bad comment', current_timestamp);
+       (4, 2, 'aggressive comment', current_timestamp),
