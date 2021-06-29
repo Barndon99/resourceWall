@@ -26,7 +26,7 @@
   <%- include('partials/_header.ejs') %>
   <body class="main-body ">
 
-    <span class="text-outline title">GITHUB</span>
+    <span class="text-outline title"><%= resources[0].name %></span>
     <!-- Route needs to be adjusted to grab resource_id-->>
     <% for(const resource of resources) { %>
     <a href="/resources/<%- resource.resource_id %>">
