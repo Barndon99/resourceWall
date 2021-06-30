@@ -45,7 +45,11 @@
       </div>
       <!-- post your comment -->
     <div class="item2 post-your-comment">
+      <form action="/resources/<%= resource[0].id %>/new" method="POST">
         <div class="comment-styling">Post your comment</div>
+        <input type="text" name="newComment" style="background-color: transparent; color: white"></input>
+        <button type="submit"></button>
+      <form>
     </div>
       <!-- photo -->
     <div class="item4 photo left-column">
@@ -53,7 +57,7 @@
     </div>
       <!-- This will be auto filled using JQuery -->
     <div class="comment-container  item3 comments">
-        <% for(let ele of resource) { %>
+        <% if (resource[0].comments) { for(let ele of resource) { %>
         <div class="comment posted-comments">
             <div>
               <p><%= ele.comments %></p>
@@ -63,7 +67,7 @@
             <p><%= ele.name %></p>
           </div>
     </div>
-        <% } %>
+        <% }}; %>
     </div>
       <!-- save button -->
       <div class="item5">

@@ -24,8 +24,9 @@ const resourceRouter = (db) => {
           db.query(`SELECT * FROM resources WHERE resources.title = '${title}'`)
           .then((response) => {
             console.log(response);
+            const templateVars = {resource: response.rows}
+            res.render('resource_show', templateVars);
           })
-          res.render('index');
         })
       })
 
@@ -34,7 +35,7 @@ const resourceRouter = (db) => {
   // Change index to resource page
   router.get("/:id", (req, res) => {
     const id = req.params.id;
-    db.query(`SELECT resources.*, resource_comments.comments as comments, users.name as name FROM resources JOIN resource_comments ON resource_comments.resource_id = resources.id JOIN users on resource_comments.guest_id = users.id WHERE resources.id = ${id}`)
+    db.query(`SELECT resources.*, resource_comments.comments as comments, users.name as name FROM resources JOIN resource_comments ON resource_comments.resource_id = resources.id JOIN users on resource_comments.guest_id = users.id WHERE resources.id = ${id} LIMIT 3;`)
     .then((response) => {
       console.log(response.rows);
       const templateVars = {resource: response.rows}
@@ -55,10 +56,23 @@ const resourceRouter = (db) => {
           .json({ error: err.message });
       });
   });
-  //router.get("/:id", (req, res) => {
-  //  console.log("PARAMS", req.params.id);
-  //  db.query('SELECT * FROM resources WHERE resources.id = ')
-  //})
+
+  router.post("/:id/new", (req, res) => {
+    const id = req.params.id;
+    const content = req.body.newComment;
+    console.log(req.session.id);
+
+    db.query(`INSERT INTO resource_comments(guest_id, resource_id, comments, timestamp)
+      VALUES('1', '${id}', '${content}', current_timestamp);
+      `)
+      .then((response) => {
+      db.query(`SELECT resources.*, resource_comments.comments as comments, users.name as name FROM resources JOIN resource_comments ON resource_comments.resource_id = resources.id JOIN users on resource_comments.guest_id = users.id WHERE resources.id = ${id} LIMIT 3;`)
+        .then((response) => {
+          const templateVars = {resource: response.rows}
+          res.render('resource_show', templateVars);
+        })
+      });
+  });
 
 
   return router;
