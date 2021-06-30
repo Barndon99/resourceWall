@@ -36,8 +36,22 @@
     <a><%= user.email %></a>
   </div>
   <section class="owned-resources">
+    <% for(const resource of owned) { %>
+      <a href="/resources/<%= resource.id %>">
+        <div><p><%= resource.title %></p></div>
+        <div><p><%= resource.description %></p></div>
+        <div><p><%= resource.url %></p></div>
+      </a>
+      <% } %>
   </section>
   <section class="saved-resources">
+    <% for(const resource of saved) { %>
+    <a href="/resources/<%= resource.id %>">
+      <div><p><%= resource.title %></p></div>
+      <div><p><%= resource.description %></p></div>
+      <div><p><%= resource.url %></p></div>
+    </a>
+    <% } %>
   </section>
   <div class="wrapper div-center">
     <div class="item1">Item 1<div class="list-of-user-resouces">My saved resouces.</div></div>
