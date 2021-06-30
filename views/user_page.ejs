@@ -28,30 +28,35 @@
     <script type="text/javascript" src="/scripts/users_saved_population.js"></script>
 </head>
 <%- include('partials/_header.ejs') %>
-<body class="main-body">
-  <div class="user-info">
-    <!-- <img src="<%- user.profile_image%>" width="100px" > -->
-
+<body class="main-body ">
+  <div class="user-info ">
     <!-- <a><%= user.email %></a> -->
   </div>
   <div class="wrapper div-center">
     <div class="item1">
       <div class="list-of-user-resouces">
+        <div class="title text-outline"> Your Resources</div>
         <section class="owned-resources style-owned-resources">
-        </section>
+        </section></br>
+        <div class="title text-outline"> Your Saved Resources</div>
         <section class="saved-resources style-saved-resources">
         </section>
       </div>
+    </div>
+    <div class="item5">
     </div>
     <div class="item2">
     </div>
     <div class="item3">
     </div>
     <div class="item4">
-      <div class="username-user-page">
-        Oh hey, </br> </br>
+      <div class="username-user-page text-outline">
+        Oh hey, </br>
         <a><%= user.name %></a>
       </div>
+    </div>
+    <div class="item6">
+      <img src="<%- user.profile_image%>" width="200px">
     </div>
   </div>
 

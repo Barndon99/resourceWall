@@ -1,22 +1,33 @@
 .wrapper {
+  padding-top: 170px;
+  padding-bottom: 250px;
   display: grid;
-  grid-template-columns: repeat(5, 20em);
-  grid-template-rows: repeat(5, 25rem);
+  grid-template-columns: repeat(10, 18em);
+  grid-template-rows: repeat(10, 12rem);
   height: 80rem;
   width: 80rem;
   gap: 10px;
   /* background-color: tomato; */
   grid-template-areas:
+    "d d c b"
     "a a a b"
-    "a a a b"
-    "d d c b";
+    "a a a f"
+    "a a a e";
 }
+.title {
+  font-size: 3rem;
+  color: rgb(240, 0, 40);
+  /* margin-left: 11rem; */
+  font-family: Bungee;
+}
+
 .item1 {
   grid-area: a;
   /* background-color: #ffff; */
   border-style: solid;
-  border-color: rgb(0, 0, 0);
+  border-color: 2px rgb(0, 0, 0);
   background-color: rgb(192, 218, 150);
+  padding: 45px;
 
 }
 /* username */
@@ -26,6 +37,7 @@
   border-style: solid;
   border-color: rgb(0, 0, 0);
   background-image: url("/images/orange.png");
+  background-position: left;
   background-color: #e61b1b;
 }
 /* profile photo */
@@ -46,7 +58,26 @@
   border-style: solid;
   border-color: rgb(0, 0, 0);
   background-color: turquoise;
+  background-image:  url("/images/square-speech/0.5x/smallArtboard 10.5.png");
+  background-size: 260px;
+  background-position: center;
 }
+.item5 {
+  grid-area: e;
+  background-color: #ffff;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  background-color: red;
+  background-image: url("/images/yellow-pop-can-md.png");
+}
+.item6 {
+  grid-area: f;
+  background-color: #ffff;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  background-color: rgb(64, 77, 224);
+}
+
 
 .username-user-page {
   padding-top: 2rem;
@@ -56,7 +87,6 @@
   font-size: 34px;
   color: rgb(156, 232, 5);
   align-self: baseline;
-  text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px, rgb(0, 0, 0) 2.35766px 1.85511px 0px, rgb(0, 0, 0) 1.62091px 2.52441px 0px, rgb(0, 0, 0) 0.705713px 2.91581px 0px, rgb(0, 0, 0) -0.287171px 2.98622px 0px, rgb(0, 0, 0) -1.24844px 2.72789px 0px, rgb(0, 0, 0) -2.07227px 2.16926px 0px, rgb(0, 0, 0) -2.66798px 1.37182px 0px, rgb(0, 0, 0) -2.96998px 0.42336px 0px, rgb(0, 0, 0) -2.94502px -0.571704px 0px, rgb(0, 0, 0) -2.59586px -1.50383px 0px, rgb(0, 0, 0) -1.96093px -2.27041px 0px, rgb(0, 0, 0) -1.11013px -2.78704px 0px, rgb(0, 0, 0) -0.137119px -2.99686px 0px, rgb(0, 0, 0) 0.850987px -2.87677px 0px, rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px, rgb(0, 0, 0) 2.88051px -0.838247px 0px;
 }
 
 .list-of-user-resouces {
@@ -80,12 +110,30 @@
 .style-owned-resources {
   font-family: 'Comic Neue', sans-serif;
   font-weight: 400;
+  color: black;
   padding-left: 8%;
-  font-size: 12px;
+  font-size: 18px;
 }
 .style-saved-resources {
   font-family: 'Comic Neue', sans-serif;
   font-weight: 400;
   padding-left: 8%;
-  font-size: 12px;
+  font-size: 18px;
+}
+
+.resource-title {
+  font-family: Bungee;
+  color: rgb(232, 5, 5);
+  font-size: 22px;
+}
+
+.resource-description {
+  color: black;
+  font-size: 22px;
+}
+
+.resource-url-link {
+  font-family: Bungee;
+  color: rgb(232, 5, 224);
+  font-size: 22px;
 }
