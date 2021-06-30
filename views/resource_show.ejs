@@ -8,9 +8,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&family=Bungee+Shade&family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
 <!-- Internal style sheets -->
 <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-<link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+<link rel="stylesheet" href="/styles/nav.css" type="text/css" /><link rel="stylesheet" href="/styles/main-layout.css" type="text/css" />
+<link rel="stylesheet" href="/styles/resource-individual-show.css" type="text/css" />
 
 <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
 <script type="text/javascript" src="/scripts/app.js"></script>
@@ -19,23 +27,49 @@
 </head>
 <!-- Top nav bar (fixed) -->
   <%- include('partials/_header.ejs') %>
-  <body>
+  <body class="main-body">
     <section id="categories-display">
-    <div class="categories-container">
-      <img src="<%- resource[0].resource_img_url %>" class="left-column">
-      <div class="middle-column">
-        <h4><%- resource[0].title %></h4>
-        <p><%- resource[0].description %></p>
-        <a href="<%- resource[0].url %>"><p><%= resource[0].url%></p></a>
+    <div class="categories-container wrapper div-center">
+
+      <!-- discription and title -->
+    <div class="middle-column item1">
+      <div class="text-outline title"> <%- resource[0].title %></div>
+       <div class="description">
+         <p><%- resource[0].description %></p>
+        </div>
+      <div class="url-link">
+        <a href="<%- resource[0].url %>">
+          <p><%= resource[0].url%></p>
+        </a>
       </div>
+      </div>
+      <!-- post your comment -->
+    <div class="item2 post-your-comment">
+        <div class="comment-styling">Post your comment</div>
+    </div>
+      <!-- photo -->
+    <div class="item4 photo left-column">
+      <img src="<%- resource[0].resource_img_url %>" style="width: 100%" >
+    </div>
       <!-- This will be auto filled using JQuery -->
-      <div class="comment-container">
+    <div class="comment-container  item3 comments">
         <% for(let ele of resource) { %>
-          <div class="comment">
-            <p><%= ele.comments %></p>
+        <div class="comment posted-comments">
+            <div>
+              <p><%= ele.comments %></p>
+            </div>
+          </br>
+          <div>
             <p><%= ele.name %></p>
           </div>
+    </div>
         <% } %>
+    </div>
+      <!-- save button -->
+      <div class="item5">
+        <div class="save-button">SAVE IT
+          <img src="/images/save-button/1.5x/Artboard 1@1.5x.png" style= "width: 300px;"></a>
+        </div>
       </div>
     </div>
   </body>

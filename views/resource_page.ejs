@@ -5,17 +5,17 @@
 <!-- External CSS -->
 <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
-<link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&family=Bungee+Shade&family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
 
 
 <!-- Internal style sheets -->
-<link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+<link rel="stylesheet" href="/styles/main-layout.css" type="text/css" />
 <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 <link rel="stylesheet" href="/styles/resource-group.css" type="text/css" />
-<link rel="stylesheet" href="/styles/main-layout.css" type="text/css" />
 <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
 <script type="text/javascript" src="/scripts/app.js"></script>
 
@@ -23,22 +23,21 @@
 <!-- <script type="text/javascript" src="/scripts/resources_population.js"></script> -->
 </head>
 <!-- Top nav bar (fixed) -->
-  <%- include('partials/_header.ejs') %>
-  <body class="main-body ">
-
+<%- include('partials/_header.ejs') %>
+<body class="main-body">
     <span class="text-outline title"><%= resources[0].name %></span>
     <!-- Route needs to be adjusted to grab resource_id-->
     <% for(const resource of resources) { %>
     <a href="/resources/<%- resource.resid %>">
       <div class="wrapper">
-      <div class="git-card text-outline" id="article-title"><%= resource.title%>
+        <div class="resource-card text-outline" id="article-title"><%= resource.title%>
         <br><br>
-        <div class="rating-box">
-          <div class="rating" style=<%- 'width:${((resource.ratings / 5) * 100)}%'%>>
+          <div class="rating-box">
+            <div class="rating" style=<%- `'width:${((resource.ratings / 5) * 100)}%'`%>>
+            </div>
           </div>
+         </div>
       </div>
-      </div>
-    </div>
     </a>
     <% } %>
 </body>

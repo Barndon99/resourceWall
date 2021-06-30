@@ -20,88 +20,30 @@
   border-radius: 5px;
 }
 
-.git-card {
+.resource-card {
   background-color: #57bfda;
   background-image: url("/images/cloud/0.5x/Artboard 10.5.png");
   color: #00a651;
   font-size: 2.7em;
 }
 
-.git-card:hover {
+.resource-card:hover {
   box-shadow: 5px 20px #ff0d19;
 }
 
- /* .git-card:hover {
-  background-image: url("/images/square-speech/0.5x/smallArtboard 10.5.png");
-} */
-
-
-.html-card {
-  background-color: #ff0d19;
-  color: #57bfda ;
-  background-image: url("/images/dots.png");
-}
-.html-card:hover {
-  box-shadow: 5px 20px rgba(255, 174, 0, 0.831);
-}
-
-
-.css-card {
-  background-color: rgba(255, 174, 0, 0.831);
-  color: mediumslateblue;
-  background-image: url("/images/dots.png");
-}
-.css-card:hover {
-  box-shadow: 5px 20px #57bfda;
-}
-
-
-.java-script-card {
-  background-color: mediumslateblue;
-  color: rgba(255, 174, 0, 0.831);
-  background-image: url("/images/dots.png");
-}
-.java-script-card:hover {
-  box-shadow: 5px 20px #57bfda;
-}
-
-
-.random-card {
-  background-color: #00a651;
-  background-image: url("/images/dots.png");
-  color:#ff0d19;
-}
-.random-card:hover {
-  box-shadow: 5px 20px #ee1ce0;
-}
-
-.random-card2 {
-  background-color: #ee1ce0;
-  background-image: url("/images/dots.png");
-  color:mediumslateblue;
-}
-.random-card2:hover {
-  box-shadow: 5px 20px #57bfda;
-}
-
-.index-background-image {
-  background-image: url("/images/dots.png");
-}
 
 .title {
   font-size: 8rem;
   color: #ff0d19;
   margin-left: 5rem;
 }
-#div-break {
 
-}
 
 #article-title {
   text-align: left;
   padding-top: 2.5rem;
   padding-left: 1rem;
-  font-family: Bungee;
+
 }
 .text-outline {
   font-family: Bungee;
