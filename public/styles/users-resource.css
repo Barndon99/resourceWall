@@ -1,15 +1,15 @@
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(5, 15em);
-  grid-template-rows: repeat(5, 13rem);
-  height: 50rem;
+  grid-template-columns: repeat(5, 20em);
+  grid-template-rows: repeat(5, 25rem);
+  height: 80rem;
   width: 80rem;
   gap: 10px;
-  background-color: tomato;
+  /* background-color: tomato; */
   grid-template-areas:
-    "a a b"
-    "a a b"
-    "c d d";
+    "a a a b"
+    "a a a b"
+    "d d c b";
 }
 .item1 {
   grid-area: a;
@@ -60,7 +60,7 @@
 }
 
 .list-of-user-resouces {
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Comic Neue', sans-serif;
   font-weight: 400;
   padding-left: 8%;
   font-size: 34px;
@@ -75,4 +75,17 @@
   margin-left: -250px;
   margin-right: 20px;
 
+}
+
+.style-owned-resources {
+  font-family: 'Comic Neue', sans-serif;
+  font-weight: 400;
+  padding-left: 8%;
+  font-size: 12px;
+}
+.style-saved-resources {
+  font-family: 'Comic Neue', sans-serif;
+  font-weight: 400;
+  padding-left: 8%;
+  font-size: 12px;
 }

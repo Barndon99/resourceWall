@@ -13,11 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&family=Bungee+Shade&family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
   <!-- Internal style sheets -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/resource-group.css" type="text/css" />
     <link rel="stylesheet" href="/styles/main-layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/users-resource.css" type="text/css" />
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
@@ -29,21 +28,31 @@
     <script type="text/javascript" src="/scripts/users_saved_population.js"></script>
 </head>
 <%- include('partials/_header.ejs') %>
-<body>
+<body class="main-body">
   <div class="user-info">
-    <img src="<%- user.profile_image%>">
-    <a><%= user.name %></a>
-    <a><%= user.email %></a>
+    <!-- <img src="<%- user.profile_image%>" width="100px" > -->
+
+    <!-- <a><%= user.email %></a> -->
   </div>
-  <section class="owned-resources">
-  </section>
-  <section class="saved-resources">
-  </section>
   <div class="wrapper div-center">
-    <div class="item1">Item 1<div class="list-of-user-resouces">My saved resouces.</div></div>
-    <div class="item2"></div>
-    <div class="item3"></div>
-    <div class="item4"> <div class="username-user-page">Oh hey, </br> </br> USERNAME</div></div>
+    <div class="item1">
+      <div class="list-of-user-resouces">
+        <section class="owned-resources style-owned-resources">
+        </section>
+        <section class="saved-resources style-saved-resources">
+        </section>
+      </div>
+    </div>
+    <div class="item2">
+    </div>
+    <div class="item3">
+    </div>
+    <div class="item4">
+      <div class="username-user-page">
+        Oh hey, </br> </br>
+        <a><%= user.name %></a>
+      </div>
+    </div>
   </div>
 
 </body>

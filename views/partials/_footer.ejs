@@ -1,0 +1,40 @@
+<div class="form-container">
+  <div id="panel">
+    <input type="button" class="button" value="" id="btn1">
+    <br>
+    <!-- Dialog Box-->
+    <div class="dialog" id="myform">
+      <form action="/newResouce" method="POST">
+        <div>
+        <input type="text" id="title" placeholder="TITLE">
+        </div>
+        <div>
+          <input type="text" id="url" placeholder="URL LINK">
+        </div>
+        <div class="drop-down">
+          <select id="category" name="category">
+            <option value="git">GIT</option>
+            <option value="vim">VIM</option>
+            <option value="javascript">JAVASCRIPT</option>
+            <option value="html/css">HTML/CSS</option>
+            <option value="node.js">NODE.JS</option>
+            <option value="databases">DATABASES</option>
+          </select>
+        </div>
+        <div class="drop-down">
+        <select id="category" name="category">
+          <option value="1star">*</option>
+          <option value="2star">**</option>
+          <option value="3star">***</option>
+          <option value="4star">****</option>
+          <option value="5star">*****</option>
+        </select>
+      </div>
+
+        <!-- OK BUTTON -->
+        <div align="center">
+          <input type="submit" value="Ok" id="btnOK">
+        </div>
+    </form>
+    </div>
+  </div>
