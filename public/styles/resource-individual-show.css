@@ -78,7 +78,7 @@
 }
 
 .description {
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Comic Neue', sans-serif;
   font-weight: 400;
   padding-left: 8%;
   font-size: 34px;
@@ -87,7 +87,7 @@
 
 .url-link {
   display: flex;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Comic Neue', sans-serif;
   font-weight: 400;
   padding-left: 8%;
   font-size: 34px;
@@ -140,9 +140,11 @@
   transition: all .1s ease-in-out;
 }
 
+
 .save-button:hover {
   transform: scale(1.2);
 }
+
 
 
 

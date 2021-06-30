@@ -9,14 +9,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&family=Bungee+Shade&family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
     <!-- Internal style sheets -->
 
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/category-cards.css" type="text/css" />
     <link rel="stylesheet" href="/styles/main-layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/popup-form.css" type="text/css" />
 
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/popup_form.js"></script>
+    <!-- jQuery Modal -->
+    <title>jQuery UI Dialog - Modal form</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
     <!-- Generates Categories -->
     <script type="text/javascript" src="/scripts/categories_population.js"></script>
   </head>
@@ -34,5 +42,6 @@
      </div>
     </div>
     </section>
+    <%- include('partials/_footer.ejs') %>
   </body>
 </html>
