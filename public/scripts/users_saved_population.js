@@ -7,7 +7,7 @@ $(document).ready(function() {
     for (const resource of savedResources) {
       const $savedResource = createSavedResourceElement(resource);
       //This query will need to target the saved resources container
-      $('body').append($savedResource);
+      $('.saved-resources').append($savedResource);
     }
   };
 
@@ -15,11 +15,14 @@ $(document).ready(function() {
     const title = resource.title;
     const description = resource.description;
     const url = resource.url;
+    const id = resource.id;
 
     const $savedResource = `
-    <div><p>${title}</p></div>
-    <div><p>${description}</p></div>
-    <div><p>${url}</p></div>
+    <a href="/resources/${id}">
+      <div><p>${title}</p></div>
+      <div><p>${description}</p></div>
+      <div><p>${url}</p></div>
+    </a>
     `;
 
     return $savedResource;
@@ -28,7 +31,7 @@ $(document).ready(function() {
   const loadSavedResources = function() {
     $.ajax({
       type: "GET",
-      url: "/users/owned_resources"
+      url: "/user/1/saved_resources"
     }).done(function (data) {
       renderSavedResources(data);
     });

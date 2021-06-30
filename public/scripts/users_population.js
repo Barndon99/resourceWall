@@ -7,7 +7,7 @@ $(document).ready(function() {
     for (const resource of ownedResources) {
       const $ownedResource = createOwnedResourceElement(resource);
       //This query will need to target the owned resources container
-      $('body').append($ownedResource);
+      $('.owned-resources').append($ownedResource);
     }
   };
 
@@ -15,11 +15,16 @@ $(document).ready(function() {
     const title = resource.title;
     const description = resource.description;
     const url = resource.url;
+    const id = resource.id;
 
     const $ownedResource = `
-    <div><p>${title}</p></div>
-    <div><p>${description}</p></div>
-    <div><p>${url}</p></div>
+    <a href="/resources/${id}">
+    <div class="resource-card">
+      <p>${title}</p>
+      <p>${description}</p>
+      <p>${url}</p>
+    </div>
+    <a>
     `;
 
     return $ownedResource;
@@ -28,10 +33,10 @@ $(document).ready(function() {
   const loadOwnedResources = function() {
     $.ajax({
       type: "GET",
-      url: "/users/owned_resources"
+      url: `/user/1/owned_resources`
     }).done(function (data) {
       renderOwnedResources(data);
     });
   };
-  loadOwnedResources();s
+  loadOwnedResources();
 });

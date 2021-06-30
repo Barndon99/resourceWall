@@ -26,7 +26,7 @@ const categoryRouter = (db) => {
 
   router.get("/:id", (req, res) => {
     const id = req.params.id;
-    console.log("ID", id);
+    console.log("ID", id, "ID2:", req.session.user_id);
     db.query(`SELECT resources.category_id as id, avg(resource_ratings.rating) as ratings, resources.title as title, categories.name as name, resources.id as resId
     FROM resources
     JOIN categories
