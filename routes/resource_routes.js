@@ -3,6 +3,12 @@ const express = require('express');
 const router  = express.Router();
 
 const resourceRouter = (db) => {
+  // create a new resource
+
+  router.post("/new", (req, res) => {
+    console.log(req.body);
+    res.render("resource_new");
+  })
 
   // Change index to resource page
   router.get("/:id", (req, res) => {
@@ -32,6 +38,7 @@ const resourceRouter = (db) => {
   //  console.log("PARAMS", req.params.id);
   //  db.query('SELECT * FROM resources WHERE resources.id = ')
   //})
+
 
   return router;
   // small comment
