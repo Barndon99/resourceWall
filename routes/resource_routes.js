@@ -21,6 +21,10 @@ const resourceRouter = (db) => {
         VALUES('${id}', 1, '${title}', '${description}', '${url}', '${resourceImgUrl}', current_timestamp);`)
         .then((response) => {
           console.log("RESPONSE: ", response)
+          db.query(`SELECT * FROM resources WHERE resources.title = '${title}'`)
+          .then((response) => {
+            console.log(response);
+          })
           res.render('index');
         })
       })
