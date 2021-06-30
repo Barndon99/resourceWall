@@ -6,8 +6,21 @@ const resourceRouter = (db) => {
   // create a new resource
 
   router.post("/new", (req, res) => {
-    console.log(req.body);
-    res.render("resource_new");
+    // console.log(req.body);
+    // console.log(req.params)
+    const categoryName = req.body.category[0][0].toUpperCase() + req.body.category[0].substring(1);
+    console.log("category:", categoryName);
+    const title = req.body.title;
+    const description = req.body.description;
+    const url = req.body.url;
+    const resourceImgUrl = req.body.resource_img_url;
+    db.query(`SELECT * FROM categories WHERE categories.name = '${categoryName}'`)
+      .then((response) => {
+        const id = response.rows[0].id;
+        db.query(`INSERT INTO resources(category_id, owner_id, title, description, url, resource_img_url, timestamp)
+        VALUES('${id}', 1, '${title}', '${description}', '${url}', '${resourceImgUrl}', current_timestamp);`)
+      })
+
   })
 
   // Change index to resource page
