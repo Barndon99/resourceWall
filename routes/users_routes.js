@@ -31,7 +31,6 @@ const userRouter = (db) => {
         res.render('user_page', templateVars);
       })
   });
-
   return router;
 }
 

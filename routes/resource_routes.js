@@ -19,6 +19,10 @@ const resourceRouter = (db) => {
         const id = response.rows[0].id;
         db.query(`INSERT INTO resources(category_id, owner_id, title, description, url, resource_img_url, timestamp)
         VALUES('${id}', 1, '${title}', '${description}', '${url}', '${resourceImgUrl}', current_timestamp);`)
+        .then((response) => {
+          console.log("RESPONSE: ", response)
+          res.render('index');
+        })
       })
 
   })
