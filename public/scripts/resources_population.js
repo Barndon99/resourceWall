@@ -31,5 +31,14 @@ $(document).ready(function() {
       renderResources(data);
     });
   };
+
+
+  function originalSaveButton(){
+    document.getElementById("button1").src="/images/save-button/1.5x/Artboard 1@1.5x.png";
+  }
+  function blastSaveButton(){
+    document.getElementById("button2").src="/images/dot-backdrop-circle/1.5x/Artboard 1@1.5x.png";
+  }
+
   loadResources();
 });
