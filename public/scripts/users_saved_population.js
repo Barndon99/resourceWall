@@ -19,10 +19,9 @@ $(document).ready(function() {
 
     const $savedResource = `
     <a href="/resources/${id}">
-      <div><p>${title}</p></div>
-      <div><p>${description}</p></div>
-      <div><p>${url}</p></div>
-    </a>
+      <span class="resource-title">${title}</span> </a>
+      <span class="resource-description">${description}</span>
+      <span class="resource-url-link"><a href="${url}" target="_blank">URL</span>
     `;
 
     return $savedResource;
