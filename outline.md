@@ -37,9 +37,9 @@
 
 ## User Scenarios
 
-*
-*
-*
+* 
+* 
+* 
 * 
 
 ## ERD/Entities
@@ -74,108 +74,58 @@ app.get('/login/:id', (req, res) => {
 8. create new categories
 
 
-#### QUERIES WE NEED
-Categories Page
-  ->Resource Page (all resources by a category)
-    ->Individual Resource page (panel)
-  ->user page (saved resources)
-
-Categores 
-  -Select all categories
-  -# of resources
-
- Resources
-  -get all resources by category_id
-  -get resource title
-  -# of times saved
-
-Individual Resource
-  -get resource title, url (take me there button), description, rating
-  -get resource comments with user_id, user_profile_pic, tablestamp
-
-User Page
-  -saved_resources by user
-  -What category is this?
-
 #### STRETCH
 
 We have lots of plans 
 
 
-```SQL
--- categories --
-SELECT * FROM categories;
+### Presentations
 
--- this counts the number of resources in each category
-SELECT categories.name as category, COUNT(resources.*) as num_of_resources
-FROM resources 
-JOIN categories ON resources.category_id = categories.id
-GROUP BY categories.name;
+1. Why did we choose to make a "Resource Wall"? 
+    * We immediately recognized the utility of this project. On a daily if not hourly basis we find ourselves saving the resources provided to us in compass and those that we find ourselves to a bookmarked folder. However, once saved, we found it difficult to find a particular resource considering the amount and their varying categories. We created an application where you categorize your resources and make them publically available for other users to save, rate and reference. This would save time in the long run for users who are just starting out in a particular field/hobby, allowing them to access the most useful resources by leaning on the expertise of the collective. 
 
--- resources --
-SELECT * FROM resources 
+2. How did we all participate in creating this web app? 
+    * Through a combitation of dividing the work vertically and routine pair-programming we achieved our MVD. The major divides were Rossanne on front-end, Brandon on the routes and Leam on the database. 
 
--- this gets all the urls displayed by their category id
-SELECT resources.url as link, categories.id as category_id
-FROM resources
-JOIN categories ON categories.id = category_id
-ORDER BY categories.id;
+3. How to Demo
+  * Personal intro/why you are excited/why you liked working on this project
 
--- this groups the resources urls by category name
-SELECT resources.url as link, categories.name as category
-FROM resources
-JOIN categories ON categories.id = category_id
-ORDER BY categories.name;
+  * Run through main features in layman terms (overview)
+    * database w/ 6 tables (users, resources, users_resources, categories, comments, ratings)
+    * This is not a SPA and relies on routes/pages to display the `categories`, `resource`, `saved_resources` and, `owned_resources` pages. Similar to the tweeter project, data is appeneded to the html. 
+    * Saving a resource 
+    * Commenting on a resource
+    * Rating a resource
+    * `Stretch` Creating a resource 
+    * `Stretch` Creating a category 
 
--- atm resources don't have a name/title so just used url
--- this counts the times a resource was saved
-SELECT resources.id, COUNT(users_resources.resource_id) as times_saved, resources.url
-FROM resources
-JOIN users_resources ON resources.id = users_resources.resource_id
-GROUP BY resources.id
-ORDER BY times_saved DESC;
 
--- Individual Resource --
--- resources don't have a description and no title.
+  * Share screen w/ project running
+    * anounce who will screen share/navigate and who will explain (___ will be sharing their screen and navigating {project name} as I go through its main features)
 
-SELECT resources.url as link, 
-resource_ratings.rating as rating, 
-users.name as rating_owner
-FROM resources 
-JOIN resource_ratings ON resources.id = resource_id
-JOIN users ON resource_ratings.owner_id = users.id
-ORDER BY rating DESC;
+  * Talk about UI decisions we made. Run through the user experience as a new user and how using this app benefits them/others (we can switch speakers here).
+  
+      * The user interface is welcoming and straight forward to use. We wanted new users to see what this app offers as soon as they enter the site so we decided the main page should contain the categories available/most popular categories. 
 
--- this shows the comment on a specific resource at a 
--- specifc time by a specific user with a profile pic
-SELECT resource_comments.comments as comment,
-resource_comments.timestamp as time,
-resource_comments.resource_id as resource,
-users.name as user,
-users.profile_image as img
-FROM resource_comments
-JOIN users ON resource_comments.guest_id = users.id;
+      * The categories and resources, take the form of clickable cards, which provides an element of familiarity for those who have used pintrest.
 
--- User Page
+      * Displaying a title, description, comments and an average rating for each resource makes it easy for users to decide if they should spend their time reading that resource, allowing them to find the answer they need more efficently. This also creates a sense of community, encouraging beginners, hobbiest and professionals alike to engage. 
 
-SELECT resources.*
-FROM resources
-JOIN users ON users.id = resources.owner_id
-WHERE users.id = 3;
+      * The users page displays the resources you created and the resources you saved from other users. This is intended to make finding and sharing the resources you found useful more efficient. `Stretch` Ideally you would be able to share your resources through a currated category - kind of like a playlist of the best resources for ____. 
 
--- How to query owner and guest at the same time?
--- I think we need to update the database as the
--- query is not no working properly for the last
--- 2 users
-SELECT users.name, 
-users.id as saver_id, 
-resources.url as saved_link,
-categories.name as category,
-users_resources.timestamp as time_of_save,
-resources.owner_id as owner_id
-FROM resources
-JOIN users_resources ON resources.id = users_resources.resource_id
-JOIN users ON users.id = users_resources.guest_id
-JOIN categories ON categories.id = resources.category_id
-WHERE users.id = 4;
-```
+      * The popart/comicbook theme injects a sense of lightheartedness and adds an element of vibrancy to an app that organizes your bookmarks. 
+
+  * mention any stretch features accomplished
+    * add
+    * them
+    * stretches
+
+  * mention stretch features we didn't get too but would like to add. 
+    * Login animation 
+    * Search bar
+
+4. What are some challenges we overcame during this project (lessons learned)? 
+    * git (fetch/merge, working on branches and creating pull requests)
+    * Working as a coding team for the first time - dividing the work(wearing your own hat), regular check-ins, relying on others to do their part.
+    * gained a better understanding of how everything connects compared to before when understanding was fragmented.
+
