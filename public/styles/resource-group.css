@@ -1,0 +1,76 @@
+.category-wrapper{
+  z-index: 1;
+  position: relative;
+  padding-top: 60px;
+  padding-left: 60px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 200px;
+  border-radius: 5px;
+  padding: 6rem;
+  grid-gap: 100px;
+}
+
+.wrapper > div {
+  height: 200px;
+  border: 3px solid #010101;
+  border-radius: 5px;
+}
+
+.resource-card {
+  background-color: #57bfda;
+  background-image: url("/images/cloud/0.5x/Artboard 10.5.png");
+  color: #00a651;
+  font-size: 2.7em;
+}
+
+.resource-card:hover {
+  box-shadow: 5px 20px #ff0d19;
+}
+
+
+.title {
+  font-size: 8rem;
+  color: #ff0d19;
+  margin-left: 5rem;
+}
+
+
+#article-title {
+  text-align: left;
+  padding-top: 2.5rem;
+  padding-left: 1rem;
+
+}
+.text-outline {
+  font-family: Bungee;
+  text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px, rgb(0, 0, 0) 2.35766px 1.85511px 0px, rgb(0, 0, 0) 1.62091px 2.52441px 0px, rgb(0, 0, 0) 0.705713px 2.91581px 0px, rgb(0, 0, 0) -0.287171px 2.98622px 0px, rgb(0, 0, 0) -1.24844px 2.72789px 0px, rgb(0, 0, 0) -2.07227px 2.16926px 0px, rgb(0, 0, 0) -2.66798px 1.37182px 0px, rgb(0, 0, 0) -2.96998px 0.42336px 0px, rgb(0, 0, 0) -2.94502px -0.571704px 0px, rgb(0, 0, 0) -2.59586px -1.50383px 0px, rgb(0, 0, 0) -1.96093px -2.27041px 0px, rgb(0, 0, 0) -1.11013px -2.78704px 0px, rgb(0, 0, 0) -0.137119px -2.99686px 0px, rgb(0, 0, 0) 0.850987px -2.87677px 0px, rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px, rgb(0, 0, 0) 2.88051px -0.838247px 0px;
+
+}
+/* STAR RATING SYSTEM */
+
+.rating-box {
+  position:relative;
+  vertical-align: middle;
+  font-size: 3em;
+  font-family: FontAwesome;
+  display:inline-block;
+  color: rgba(255, 238, 50);
+}
+.rating-box:before{
+    content: "\f006 \f006 \f006 \f006 \f006";
+  }
+.rating-box .rating {
+    position: absolute;
+    left:0;
+    top:0;
+    white-space:nowrap;
+    overflow:hidden;
+    color: rgb(255, 238, 50);
+  }
+  .rating-box .rating:before {
+      content: "\f005 \f005 \f005 \f005 \f005";
+    }

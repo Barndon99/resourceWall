@@ -1,13 +1,13 @@
 //Keep queries in Routes this file should be used to dynamically render EJS
 $(document).ready(function() {
   //Adds a new DIV containing categories to the DOM
+  console.log("HERE");
   const renderResources = function(resources) {
     //$("body").empty();
     // loops through categories
     for (const resource of resources) {
-      // calls createCategory for each category
       const $resource = createResourceElement(resource);
-      $('body').append($resource);
+      $('.container').append($resource);
     }
   };
 
@@ -26,7 +26,7 @@ $(document).ready(function() {
   const loadResources = function() {
     $.ajax({
       type: "GET",
-      url: "/resources/get"
+      url: "/resources/"
     }).done(function (data) {
       renderResources(data);
     });

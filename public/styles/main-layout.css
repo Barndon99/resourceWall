@@ -5,3 +5,20 @@
   background-repeat: no-repeat;
 
 }
+
+
+a:link {
+  color: yellow;
+}
+/* visited link */
+a:visited {
+  color: #00a651;
+}
+/* mouse over link */
+a:hover {
+  color: #57bfda;;
+}
+/* selected link */
+a:active {
+  color: #f61eb7;
+}

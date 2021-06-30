@@ -128,4 +128,3 @@ We have lots of plans
     * git (fetch/merge, working on branches and creating pull requests)
     * Working as a coding team for the first time - dividing the work(wearing your own hat), regular check-ins, relying on others to do their part.
     * gained a better understanding of how everything connects compared to before when understanding was fragmented.
-
