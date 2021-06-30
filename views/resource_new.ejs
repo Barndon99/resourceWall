@@ -22,7 +22,15 @@
 <%- include('partials/_header.ejs') %>
 <body class="main-body">
     <section >
-
+      <form method="POST" action="/new">
+        <input type="text" name="category_id"></input>
+        <input type="text" name="owner_id"></input>
+        <input type="text" name="title"></input>
+        <input type="text" name="description"></input>
+        <input type="text" name="url"></input>
+        <input type="text" name="resource_img_url"></input>
+        <button type="submit">Create Resource</button>
+      </form>
     </section>
   </body>
 
