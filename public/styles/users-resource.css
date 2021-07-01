@@ -9,9 +9,9 @@
   gap: 10px;
   /* background-color: tomato; */
   grid-template-areas:
-    "d d c b"
-    "a a a b"
-    "a a a f"
+    "d d b c"
+    "a a a c"
+    "a a a c"
     "a a a e";
 }
 .title {
@@ -43,11 +43,10 @@
 /* profile photo */
 .item3 {
   grid-area: c;
-  background-color: #ffff;
   border-style: solid;
   border-color: rgb(0, 0, 0);
   background-color: pink;
-  background-image: url("/images/ico_vrouw_popart.png");
+  background-image: url("/images/Dr-Manhattan-Comic.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -67,8 +66,9 @@
   background-color: #ffff;
   border-style: solid;
   border-color: rgb(0, 0, 0);
-  background-color: red;
+  background-color: tomato;
   background-image: url("/images/yellow-pop-can-md.png");
+  /* background-position: left; */
 }
 .item6 {
   grid-area: f;

@@ -24,7 +24,6 @@ $(document).ready(function() {
       <span class="resource-description">${description}</span>
       <span class="resource-url-link"><a href="${url}" target="_blank">URL</span>
     </div>
-    <span class="spacers"></span>
     `;
 
     return $ownedResource;

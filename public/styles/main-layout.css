@@ -8,11 +8,11 @@
 
 
 a:link {
-  color: yellow;
+   text-decoration: none;
 }
 /* visited link */
 a:visited {
-  color: #00a651;
+   text-decoration: none;
 }
 /* mouse over link */
 a:hover {
