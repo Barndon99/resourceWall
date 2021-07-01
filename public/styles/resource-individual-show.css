@@ -2,8 +2,6 @@
   display: grid;
   border-radius: 100px;
   align-self: center;
-  /* background-color: #e61b1b;
-  background-image: url("/images/square-speech/1.5x/smallArtboard 1@1.5x.png"); */
   grid-template-columns: repeat(5, 15em);
   grid-template-rows: repeat(5, 13rem);
   height: 50rem;
@@ -36,11 +34,29 @@
 
 .item2 {
   grid-area: b;
-  background-color: #ffff;
+  background-color: rgb(13, 21, 255);
   border-style: solid;
   border-color: rgb(0, 0, 0);
+}
+.post-your-comment {
+  background-image: url("/images/dot-backdrop-circle/1.5x/Artboard 1@1.5x.png");
+}
+.text-box {
+  width:800px;
+  height: 300px;
+  font-family: Bungee;
+  font-weight: 400;
+  padding-left: 2%;
+  color: white(255, 255, 255, 0.714)"
 
 }
+input[type=text] {
+  width: 600px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
 /* other people comments */
 .item3 {
   grid-area: c;
@@ -69,7 +85,6 @@
   padding-bottom: 1rem;
   font-size: 4rem;
   text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px, rgb(0, 0, 0) 2.35766px 1.85511px 0px, rgb(0, 0, 0) 1.62091px 2.52441px 0px, rgb(0, 0, 0) 0.705713px 2.91581px 0px, rgb(0, 0, 0) -0.287171px 2.98622px 0px, rgb(0, 0, 0) -1.24844px 2.72789px 0px, rgb(0, 0, 0) -2.07227px 2.16926px 0px, rgb(0, 0, 0) -2.66798px 1.37182px 0px, rgb(0, 0, 0) -2.96998px 0.42336px 0px, rgb(0, 0, 0) -2.94502px -0.571704px 0px, rgb(0, 0, 0) -2.59586px -1.50383px 0px, rgb(0, 0, 0) -1.96093px -2.27041px 0px, rgb(0, 0, 0) -1.11013px -2.78704px 0px, rgb(0, 0, 0) -0.137119px -2.99686px 0px, rgb(0, 0, 0) 0.850987px -2.87677px 0px, rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px, rgb(0, 0, 0) 2.88051px -0.838247px 0px;
-
 }
 
 .title {
@@ -79,7 +94,7 @@
 
 .description {
   font-family: 'Comic Neue', sans-serif;
-  font-weight: 400;
+  font-weight: 900;
   padding-left: 8%;
   font-size: 34px;
   color: black;
@@ -88,12 +103,11 @@
 .url-link {
   display: flex;
   font-family: 'Comic Neue', sans-serif;
-  font-weight: 400;
+  font-weight: 900;
   padding-left: 8%;
   font-size: 34px;
   color: rgb(156, 232, 5);
   align-self: baseline;
-  text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px, rgb(0, 0, 0) 2.35766px 1.85511px 0px, rgb(0, 0, 0) 1.62091px 2.52441px 0px, rgb(0, 0, 0) 0.705713px 2.91581px 0px, rgb(0, 0, 0) -0.287171px 2.98622px 0px, rgb(0, 0, 0) -1.24844px 2.72789px 0px, rgb(0, 0, 0) -2.07227px 2.16926px 0px, rgb(0, 0, 0) -2.66798px 1.37182px 0px, rgb(0, 0, 0) -2.96998px 0.42336px 0px, rgb(0, 0, 0) -2.94502px -0.571704px 0px, rgb(0, 0, 0) -2.59586px -1.50383px 0px, rgb(0, 0, 0) -1.96093px -2.27041px 0px, rgb(0, 0, 0) -1.11013px -2.78704px 0px, rgb(0, 0, 0) -0.137119px -2.99686px 0px, rgb(0, 0, 0) 0.850987px -2.87677px 0px, rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px, rgb(0, 0, 0) 2.88051px -0.838247px 0px;
 }
 
 .photo {
@@ -104,30 +118,27 @@
 
 .comments {
   display: flex;
-  font-family: 'Comic Neue', cursive;
-  font-weight: 400;
-  padding-left: 8%;
+  font-family: 'Comic Neue', sans-serif;
+  font-weight: 900;
+  padding: 25px;
   font-size: 34px;
   background-color: #fcdf0d;
   background-image: url("/images/yellow-dots/4x/Artboard 1@4x.png");
-}
-
-.post-your-comment {
-  background-image: url("/images/dot-backdrop-circle/1.5x/Artboard 1@1.5x.png");
-  background-color: rgb(13, 21, 255);
 }
 
 .comment-styling {
   padding-top: 2rem;
   font-family: Bungee;
   font-weight: 400;
-  padding-left: 8%;
+  padding-left: 2%;
   font-size: 34px;
   color: rgb(156, 232, 5);
   align-self: baseline;
-  text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px, rgb(0, 0, 0) 2.35766px 1.85511px 0px, rgb(0, 0, 0) 1.62091px 2.52441px 0px, rgb(0, 0, 0) 0.705713px 2.91581px 0px, rgb(0, 0, 0) -0.287171px 2.98622px 0px, rgb(0, 0, 0) -1.24844px 2.72789px 0px, rgb(0, 0, 0) -2.07227px 2.16926px 0px, rgb(0, 0, 0) -2.66798px 1.37182px 0px, rgb(0, 0, 0) -2.96998px 0.42336px 0px, rgb(0, 0, 0) -2.94502px -0.571704px 0px, rgb(0, 0, 0) -2.59586px -1.50383px 0px, rgb(0, 0, 0) -1.96093px -2.27041px 0px, rgb(0, 0, 0) -1.11013px -2.78704px 0px, rgb(0, 0, 0) -0.137119px -2.99686px 0px, rgb(0, 0, 0) 0.850987px -2.87677px 0px, rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px, rgb(0, 0, 0) 2.88051px -0.838247px 0px;
 }
 
+.user-name-for-comment {
+  color: #e61b1b;
+}
 .save-button {
   padding-top: 2rem;
   font-family: Bungee;
@@ -136,15 +147,28 @@
   font-size: 34px;
   color: rgb(156, 232, 5);
   align-self: baseline;
-  text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px, rgb(0, 0, 0) 2.35766px 1.85511px 0px, rgb(0, 0, 0) 1.62091px 2.52441px 0px, rgb(0, 0, 0) 0.705713px 2.91581px 0px, rgb(0, 0, 0) -0.287171px 2.98622px 0px, rgb(0, 0, 0) -1.24844px 2.72789px 0px, rgb(0, 0, 0) -2.07227px 2.16926px 0px, rgb(0, 0, 0) -2.66798px 1.37182px 0px, rgb(0, 0, 0) -2.96998px 0.42336px 0px, rgb(0, 0, 0) -2.94502px -0.571704px 0px, rgb(0, 0, 0) -2.59586px -1.50383px 0px, rgb(0, 0, 0) -1.96093px -2.27041px 0px, rgb(0, 0, 0) -1.11013px -2.78704px 0px, rgb(0, 0, 0) -0.137119px -2.99686px 0px, rgb(0, 0, 0) 0.850987px -2.87677px 0px, rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px, rgb(0, 0, 0) 2.88051px -0.838247px 0px;
-  transition: all .1s ease-in-out;
 }
 
 
 .save-button:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
-
+button {
+  /* display: inline-block; */
+  background-color: aqua;
+  border-radius: 10px;
+  border: 4px solid black;
+  color: #000000;
+  text-align: center;
+  font-size: 24px;
+  padding: 14px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
 
 

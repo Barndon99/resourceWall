@@ -17,7 +17,9 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
 <!-- Internal style sheets -->
 <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-<link rel="stylesheet" href="/styles/nav.css" type="text/css" /><link rel="stylesheet" href="/styles/main-layout.css" type="text/css" />
+<link rel="stylesheet" href="/styles/popup-form.css" type="text/css" />
+<link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+<link rel="stylesheet" href="/styles/main-layout.css" type="text/css" />
 <link rel="stylesheet" href="/styles/resource-individual-show.css" type="text/css" />
 
 <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
@@ -37,7 +39,7 @@
        <div class="description">
          <p><%- resource[0].description %></p>
         </div>
-      <div class="url-link">
+      <div class="url-link text-outline">
         <a href="<%- resource[0].url %>">
           <p><%= resource[0].url%></p>
         </a>
@@ -45,10 +47,12 @@
       </div>
       <!-- post your comment -->
     <div class="item2 post-your-comment">
-      <form action="/resources/<%= resource[0].id %>/new" method="POST">
-        <div class="comment-styling">Post your comment</div>
-        <input type="text" name="newComment" style="background-color: transparent; color: white"></input>
-        <button type="submit"></button>
+      <form class="text-box" action="/resources/<%= resource[0].id %>/new" method="POST">
+        <div class="comment-styling text-outline">Post your comment</div>
+        <div class="text-box" >
+        <input type="text" name="newComment"></input>
+        <button type="submit">post</button>
+      </div>
       <form>
     </div>
       <!-- photo -->
@@ -57,21 +61,17 @@
     </div>
       <!-- This will be auto filled using JQuery -->
     <div class="comment-container  item3 comments">
-        <% if (resource[0].comments) { for(let ele of resource) { %>
-        <div class="comment posted-comments">
-            <div>
-              <p><%= ele.comments %></p>
-            </div>
-          </br>
-          <div>
-            <p><%= ele.name %></p>
-          </div>
-    </div>
+        <% if (resource[0].comments) { %>
+          <% for(let ele of resource) { %>
+        <span class="comment posted-comments">
+          <span><%= ele.comments %></span>
+          <span class="user-name-for-comment"><%= ele.name %></span>
+        </span>
         <% }}; %>
     </div>
       <!-- save button -->
       <div class="item5">
-        <div class="save-button">SAVE IT
+        <div class="save-button text-outline">SAVE IT
           <img
           src="/images/save-button/1.5x/Artboard 1@1.5x.png" style= "width: 300px;"></a>
         </div>
