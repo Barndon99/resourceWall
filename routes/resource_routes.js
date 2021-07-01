@@ -24,7 +24,8 @@ const resourceRouter = (db) => {
           db.query(`SELECT * FROM resources WHERE resources.title = '${title}'`)
           .then((response) => {
             console.log(response);
-            const templateVars = {resource: response.rows}
+            const templateVars = {resource: response.rows, user: req.session.user_id}
+            console.log(templateVars);
             res.render('resource_show', templateVars);
           })
         })
@@ -38,7 +39,8 @@ const resourceRouter = (db) => {
     db.query(`SELECT resources.*, resource_comments.comments as comments, users.name as name FROM resources JOIN resource_comments ON resource_comments.resource_id = resources.id JOIN users on resource_comments.guest_id = users.id WHERE resources.id = ${id} LIMIT 3;`)
     .then((response) => {
       console.log(response.rows);
-      const templateVars = {resource: response.rows}
+      const id = req.session.user_id;
+      const templateVars = {resource: response.rows, user: id }
       res.render('resource_show', templateVars);
     });
     //res.render('resource_page');
@@ -60,18 +62,20 @@ const resourceRouter = (db) => {
   router.post("/:id/new", (req, res) => {
     const id = req.params.id;
     const content = req.body.newComment;
-    console.log(req.session.id);
-    //req.session.uder_id
+    if (req.session.user_id) {
     db.query(`INSERT INTO resource_comments(guest_id, resource_id, comments, timestamp)
       VALUES('${req.session.user_id}', '${id}', '${content}', current_timestamp);
       `)
       .then((response) => {
       db.query(`SELECT resources.*, resource_comments.comments as comments, users.name as name FROM resources JOIN resource_comments ON resource_comments.resource_id = resources.id JOIN users on resource_comments.guest_id = users.id WHERE resources.id = ${id} LIMIT 3;`)
         .then((response) => {
-          const templateVars = {resource: response.rows}
+          const templateVars = {resource: response.rows, user: req.session.user_id }
           res.render('resource_show', templateVars);
         })
       });
+    } else {
+      res.redirect(302, '/login');
+    }
   });
 
 

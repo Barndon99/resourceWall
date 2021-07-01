@@ -27,7 +27,11 @@
 <!-- <script type="text/javascript" src="/scripts/resources_population.js"></script> -->
 </head>
 <!-- Top nav bar (fixed) -->
-<%- include('partials/_header.ejs') %>
+  <% if (!user) { %>
+  <%- include('partials/_loginHeader.ejs') %>
+  <% } else { %>
+  <%- include('partials/_header.ejs') %>
+  <% }; %>
 <body class="main-body">
     <span class="text-outline title"><%= resources[0].name %></span>
     <!-- Route needs to be adjusted to grab resource_id-->

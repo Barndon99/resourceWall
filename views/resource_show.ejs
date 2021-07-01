@@ -28,7 +28,11 @@
 <script type="text/javascript" src="/scripts/generate_comments.js"></script>
 </head>
 <!-- Top nav bar (fixed) -->
+  <% if (!user) { %>
+  <%- include('partials/_loginHeader.ejs') %>
+  <% } else { %>
   <%- include('partials/_header.ejs') %>
+  <% }; %>
   <body class="main-body">
     <section id="categories-display">
     <div class="categories-container wrapper div-center">
