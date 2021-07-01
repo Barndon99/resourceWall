@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&family=Bungee+Shade&family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
 <!-- Internal style sheets -->
 <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
@@ -18,10 +19,18 @@
 <script type="text/javascript" src="/scripts/categories_population.js"></script>
 </head>
 <!-- Top nav bar (fixed) -->
-  <%- include('partials/_header.ejs') %>
-  <body>
+<%- include('partials/_header.ejs') %>
+<body class="main-body">
     <section >
-
+      <form method="POST" action="/new">
+        <input type="text" name="category_id"></input>
+        <input type="text" name="owner_id"></input>
+        <input type="text" name="title"></input>
+        <input type="text" name="description"></input>
+        <input type="text" name="url"></input>
+        <input type="text" name="resource_img_url"></input>
+        <button type="submit">Create Resource</button>
+      </form>
     </section>
   </body>
 

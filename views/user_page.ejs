@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>username</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&family=Bungee+Shade&family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+  <!-- Internal style sheets -->
+  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  <script type="text/javascript" src="/scripts/app.js"></script>
+  <!-- header -->
+  <script type="text/javascript" src="/scripts/search.js"></script>
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/search-form.css" type="text/css" />
+  <!-- Footer -->
+  <script type="text/javascript" src="/scripts/popup_form.js"></script>
+  <link rel="stylesheet" href="/styles/popup-form.css" type="text/css" />
+  <!-- General -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/main-layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/users-resource.css" type="text/css" />
+
+    <!-- May or may not populate owned resources -->
+    <script type="text/javascript" src="/scripts/users_population.js"></script>
+    <!-- Will 96% of the time populate saved resources as long as the user is user 1 -->
+    <script type="text/javascript" src="/scripts/users_saved_population.js"></script>
+</head>
+<%- include('partials/_header.ejs') %>
+<body class="main-body ">
+  <div class="user-info ">
+    <!-- <a><%= user.email %></a> -->
+  </div>
+  <div class="wrapper div-center">
+    <div class="item1">
+      <div class="list-of-user-resouces">
+        <div class="title text-outline"> Your Resources</div>
+        <section class="owned-resources">
+          <% for(const resource of owned) { %>
+            <a href="/resources/<%= resource.id %>">
+              <span class="resource-title"><%= resource.title %></span></a>
+              <span class="resource-description"><%= resource.description %></span>
+              <span class="resource-url-link"><a href="<%= resource.url %>" target="_blank">URL</span>
+            </a></br>
+            <% } %>
+        </section>
+        </br>
+        <div class="title text-outline"> Your Saved Resources</div>
+        <section class="saved-resources style-saved-resources">
+            <% for(const resource of saved) { %>
+            <a href="/resources/<%= resource.id %>">
+              <span class="resource-title"><%= resource.title %></span></a>
+              <span class="resource-description"><%= resource.description %></span>
+              <span class="resource-url-link"><a href="<%= resource.url %>" target="_blank">URL</span>
+            </a></br>
+            <% } %>
+        </section>
+      </div>
+    </div>
+    <div class="item5">
+    </div>
+    <div class="item2">
+    </div>
+    <div class="item3">
+    </div>
+    <div class="item4">
+      <div class="username-user-page text-outline">
+        Oh hey, </br>
+        <a><%= user.name %></a>
+      </div>
+    </div>
+    <div class="item6">
+      <img src="<%- user.profile_image%>" width="200px">
+    </div>
+  </div>
+  <%- include('partials/_footer.ejs') %>
+</body>
+</html>

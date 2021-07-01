@@ -1,20 +1,40 @@
 <header>
   <nav>
     <div class="nav_bar_container">
-      <span class="nav_logo_title bleed-left" ><img src="/images/logo_bubble.png" style= "width: 400px;"></span>
-        <span id="write_a_new_tweet_container">
-           <span class="nav-links">
-             <a id="login">Login &nbsp; &nbsp;</a>
-             <a id="signup">Sign up</a>
-             <form class="topnav search-container"></form>
+      <a href ="/" class="nav_logo_title" >
+        <img src="/images/logo_bubble.png" style= "width: 400px;"></a>
+           <span class="nav-links text-outline ">
+
+             <a href="/categories/"><div class="categories"> categories<i class="fa-solid fa-code"></i></div></a>
+             <a href="/user/<%- user.id %>"><div class="username">My Resources<i class="fa-solid fa-code"></i></div></a>
+             
+             <a href="/login/logout"><div class="logout"> logout<i class="fa-solid fa-code"></i></div></a>
+            </span>
+            <span class="flash-light" id="btn-flash-light">
+              <img class="flash-light" src="/images/flash-light_v2/1.5x/flash-light@1.5x.png" style ="width: 400px;">
           </span>
-        </span>
-
-        <span class="flash-light"><img src="/images/glowing-flashlight.png" style= "width: 300px;" >
-        </span>
-
-
+        <!-- Dialog Box-->
+        <div class="Searchbox-container">
+          <div class="dialog" id="searchform">
+            <form method="POST" action=" ">
+              <div class="drop-down">
+                <select id="search" name="search">
+                  <option value="Git">GIT</option>
+                  <option value="Vim">VIM</option>
+                  <option value="Javascript">JAVASCRIPT</option>
+                  <option value="HTML/CSS">HTML/CSS</option>
+                  <option value="Node.js">NODE.JS</option>
+                  <option value="Databases">DATABASES</option>
+                </select>
+              </div>
+              <!-- OK BUTTON -->
+              <div align="center">
+                <button type="submit" id="btnOK">OK</button>
+              </div>
+            </form>
+          </div>
+          <!-- end of form  -->
     </div>
-  </nav>
-  <div class="navHeadSpace"></div>
+</nav>
 </header>
+<div class="navHeadSpace"></div>
