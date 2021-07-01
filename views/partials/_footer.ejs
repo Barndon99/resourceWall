@@ -4,28 +4,21 @@
     <br>
     <!-- Dialog Box-->
     <div class="dialog" id="myform">
-      <form method="POST" action="/resources/new">
+      <form action="/newResouce" method="POST">
         <div>
-        <input type="text" name="title" id="title" placeholder="TITLE">
+        <input type="text" id="title" placeholder="TITLE">
         </div>
         <div>
-          <input type="text" name="description" id="description" placeholder="DESCRIPTION">
+          <input type="text" id="url" placeholder="URL LINK">
         </div>
-        <div>
-          <input type="text" name="url" id="url" placeholder="RESOURCE URL">
-        </div>
-        <div>
-          <input type="text" name="resource_img_url" id="resource_img_url" placeholder="IMG URL">
-        </div>
-
         <div class="drop-down">
           <select id="category" name="category">
-            <option value="Git">GIT</option>
-            <option value="Vim">VIM</option>
-            <option value="Javascript">JAVASCRIPT</option>
-            <option value="HTML/CSS">HTML/CSS</option>
-            <option value="Node.js">NODE.JS</option>
-            <option value="Databases">DATABASES</option>
+            <option value="git">GIT</option>
+            <option value="vim">VIM</option>
+            <option value="javascript">JAVASCRIPT</option>
+            <option value="html/css">HTML/CSS</option>
+            <option value="node.js">NODE.JS</option>
+            <option value="databases">DATABASES</option>
           </select>
         </div>
         <div class="drop-down">
@@ -40,8 +33,8 @@
 
         <!-- OK BUTTON -->
         <div align="center">
-          <button type="submit" id="btnOK">OK</button>
+          <input type="submit" value="Ok" id="btnOK">
         </div>
-      </form>
+    </form>
     </div>
   </div>

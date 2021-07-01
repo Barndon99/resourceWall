@@ -20,11 +20,11 @@ $(document).ready(function() {
     const $ownedResource = `
     <a href="/resources/${id}">
     <div class="resource-card">
-      <p>${title}</p>
-      <p>${description}</p>
-      <p>${url}</p>
+      <span class="resource-title">${title}</span></a>
+      <span class="resource-description">${description}</span>
+      <span class="resource-url-link"><a href="${url}" target="_blank">URL</span>
     </div>
-    <a>
+    <span class="spacers"></span>
     `;
 
     return $ownedResource;
