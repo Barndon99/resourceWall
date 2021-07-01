@@ -15,15 +15,19 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
   <!-- Internal style sheets -->
+  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  <script type="text/javascript" src="/scripts/app.js"></script>
+  <!-- header -->
+  <script type="text/javascript" src="/scripts/search.js"></script>
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/search-form.css" type="text/css" />
+  <!-- Footer -->
+  <script type="text/javascript" src="/scripts/popup_form.js"></script>
+  <link rel="stylesheet" href="/styles/popup-form.css" type="text/css" />
+  <!-- General -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/main-layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/users-resource.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/search-form.css" type="text/css" />
-    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-    <script type="text/javascript" src="/scripts/app.js"></script>
-    <script type="text/javascript" src="/scripts/search.js"></script>
-    <script type="text/javascript" src="/scripts/popup_form.js"></script>
 
     <!-- May or may not populate owned resources -->
     <script type="text/javascript" src="/scripts/users_population.js"></script>
@@ -77,6 +81,6 @@
       <img src="<%- user.profile_image%>" width="200px">
     </div>
   </div>
-
+  <%- include('partials/_footer.ejs') %>
 </body>
 </html>
