@@ -52,6 +52,8 @@
   <script type="text/javascript" src="/scripts/app.js"></script>
   <!-- Save button -->
   <script type="text/javascript" src="/scripts/save_resource.js"></script>
+  <!-- Will in most circumstances including full moons, and rain dances generate a search bar-->
+  <script type="text/javascript" src="/scripts/search.js"></script>
 </head>
 <!-- Top nav bar (fixed) -->
 <% if (!user) { %>
@@ -111,7 +113,15 @@
                         </span>
                         </br>
                       </span>
-                      <% }}; %>
+                      <% }; } else { %>
+                      <span class="comment posted-comments">
+                        <span>
+                        </span>
+                      </br>
+                      <span class="user-name-for-comment"></span>
+                      </span>
+                      </span>
+                      <% }; %>
                 </div>
                 <!-- save button -->
                   <div class="item5">

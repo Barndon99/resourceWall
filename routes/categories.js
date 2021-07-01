@@ -25,6 +25,12 @@ const categoryRouter = (db) => {
       });
   });
 
+  router.post('/search', (req, res) => {
+    const categoryId = req.body.search;
+
+    res.redirect(302, `/categories/${categoryId}`);
+  })
+
   router.get("/:id", (req, res) => {
     const id = req.params.id;
     db.query(`SELECT resources.category_id as id, avg(resource_ratings.rating) as ratings, resources.title as title, categories.name as name, resources.id as resId

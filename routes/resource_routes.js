@@ -20,16 +20,18 @@ const resourceRouter = (db) => {
     // console.log(req.body);
     // console.log(req.params)
     const categoryName = req.body.category[0][0].toUpperCase() + req.body.category[0].substring(1);
-    console.log("category:", categoryName);
     const title = req.body.title;
     const description = req.body.description;
     const url = req.body.url;
     const resourceImgUrl = req.body.resource_img_url;
+    const user_id = req.session.user_id;
+    console.log("MADE IT IN NEW");
     db.query(`SELECT * FROM categories WHERE categories.name = '${categoryName}'`)
       .then((response) => {
         const id = response.rows[0].id;
+        console.log("MADE IT IN FIRST RESPONSE");
         db.query(`INSERT INTO resources(category_id, owner_id, title, description, url, resource_img_url, timestamp)
-        VALUES('${id}', 1, '${title}', '${description}', '${url}', '${resourceImgUrl}', current_timestamp);`)
+        VALUES(${id}, ${user_id}, '${title}', '${description}', '${url}', '${resourceImgUrl}', current_timestamp);`)
         .then((response) => {
           console.log("RESPONSE: ", response)
           db.query(`SELECT * FROM resources WHERE resources.title = '${title}'`)
@@ -81,7 +83,9 @@ const resourceRouter = (db) => {
       .then((response) => {
       db.query(`SELECT resources.*, resource_comments.comments as comments, users.name as name FROM resources JOIN resource_comments ON resource_comments.resource_id = resources.id JOIN users on resource_comments.guest_id = users.id WHERE resources.id = ${id} LIMIT 3;`)
         .then((response) => {
+
           const templateVars = {resource: response.rows, user: req.session.user_id }
+          console.log(templateVars.resource);
           res.render('resource_show', templateVars);
         })
       });
