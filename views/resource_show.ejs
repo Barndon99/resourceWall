@@ -1,89 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Categories Display</title>
-<!-- External CSS -->
-<link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-<link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&family=Bungee+Shade&family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
-<!-- Internal style sheets -->
-<link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-<link rel="stylesheet" href="/styles/popup-form.css" type="text/css" />
-<link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-<link rel="stylesheet" href="/styles/main-layout.css" type="text/css" />
-<link rel="stylesheet" href="/styles/resource-individual-show.css" type="text/css" />
 
-<script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-<script type="text/javascript" src="/scripts/app.js"></script>
-<!-- Generate comments -->
-<script type="text/javascript" src="/scripts/generate_comments.js"></script>
+<head>
+  <title>Categories Display</title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&family=Bungee+Shade&family=Montserrat:wght@300;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+  <!-- Internal style sheets -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/popup-form.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/main-layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/resource-individual-show.css" type="text/css" />
+
+  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  <script type="text/javascript" src="/scripts/app.js"></script>
+  <!-- Save button -->
+  <script type="text/javascript" src="/scripts/save_resource.js"></script>
 </head>
 <!-- Top nav bar (fixed) -->
-  <% if (!user) { %>
+<% if (!user) { %>
   <%- include('partials/_loginHeader.ejs') %>
-  <% } else { %>
-  <%- include('partials/_header.ejs') %>
-  <% }; %>
-  <body class="main-body">
-    <section id="categories-display">
-    <div class="categories-container wrapper div-center">
+    <% } else { %>
+      <%- include('partials/_header.ejs') %>
+        <% }; %>
 
-      <!-- discription and title -->
-    <div class="middle-column item1">
-      <div class="text-outline title"> <%- resource[0].title %></div>
-       <div class="description">
-         <p><%- resource[0].description %></p>
-        </div>
-      <div class="url-link text-outline">
-        <a href="<%- resource[0].url %>">
-          <p><%= resource[0].url%></p>
-        </a>
-      </div>
-      </div>
-      <!-- post your comment -->
-    <div class="item2 post-your-comment">
-      <form class="text-box" action="/resources/<%= resource[0].id %>/new" method="POST">
-        <div class="comment-styling text-outline">Post your comment</div>
-        <div class="text-box" >
-        <input type="text" name="newComment"></input>
-        <button type="submit">post</button>
-      </div>
-      <form>
-    </div>
-      <!-- photo -->
-    <div class="item4 photo left-column">
-      <img src="<%- resource[0].resource_img_url %>" style="width: 100%" >
-    </div>
-      <!-- This will be auto filled using JQuery -->
-    <div class="comment-container  item3 comments">
-      <div class="posted-comment-title ">group chat</div>
-        <% if (resource[0].comments) { %>
-          <% for(let ele of resource) { %>
-        <span class="comment posted-comments">
-          <span><%= ele.comments %></span>
-        </br>
-          <span class="user-name-for-comment"><%= ele.name %></span>
-        </br>
-        </span>
-        <% }}; %>
-    </div>
-      <!-- save button -->
-      <div class="item5">
-        <div class="save-button text-outline">SAVE IT
-          <img
-          src="/images/save-button/1.5x/Artboard 1@1.5x.png" style= "width: 300px;"></a>
-        </div>
-      </div>
-    </div>
-  </section>
-</body>
+          <body class="main-body">
+            <section id="categories-display">
+              <div class="categories-container wrapper div-center">
+
+                <!-- discription and title -->
+                <div class="middle-column item1">
+                  <div class="text-outline title">
+                    <%- resource[0].title %>
+                  </div>
+                  <div class="description">
+                    <p>
+                      <%- resource[0].description %>
+                    </p>
+                  </div>
+                  <div class="url-link text-outline">
+                    <a href="<%- resource[0].url %>">
+                      <p>
+                        <%= resource[0].url%>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+                <!-- post your comment -->
+                <div class="item2 post-your-comment">
+                  <form class="text-box" action="/resources/<%= resource[0].id %>/new" method="POST">
+                    <div class="comment-styling text-outline">Post your comment</div>
+                    <div class="text-box">
+                      <input type="text" name="newComment"></input>
+                      <button type="submit">post</button>
+                    </div>
+                  </form>
+                </div>
+                <!-- photo -->
+                <div class="item4 photo left-column">
+                  <img src="<%- resource[0].resource_img_url %>" style="width: 100%">
+                </div>
+                <!-- This will be auto filled using JQuery -->
+                <div class="comment-container  item3 comments">
+                  <div class="posted-comment-title ">group chat</div>
+                  <% if (resource[0].comments) { %>
+                    <% for(let ele of resource) { %>
+                      <span class="comment posted-comments">
+                        <span>
+                          <%= ele.comments %>
+                        </span>
+                        </br>
+                        <span class="user-name-for-comment">
+                          <%= ele.name %>
+                        </span>
+                        </br>
+                      </span>
+                      <% }}; %>
+                </div>
+                <!-- save button -->
+                  <div class="item5">
+                    <div class="save-button text-outline">
+                      <button id="saveButton">SAVE IT
+                        <img src="/images/save-button/1.5x/Artboard 1@1.5x.png" style="width: 300px;">
+                      </button>
+                    </div>
+                  </div>
+              </div>
+            </section>
+          </body>
+
 </html>

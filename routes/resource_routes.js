@@ -4,6 +4,17 @@ const router  = express.Router();
 
 const resourceRouter = (db) => {
   // create a new resource
+  router.post('/save', (req, res) => {
+    const location = req.body.resourceId;
+    const userId = req.session.user_id;
+    if (userId) {
+    db.query(`INSERT INTO users_resources(guest_id, resource_id, timestamp)
+    VALUES('${userId}', '${location}', current_timestamp);`)
+      .then((result) => {});
+    } else {
+      res.alert('Login Please');
+    }
+  });
 
   router.post("/new", (req, res) => {
     // console.log(req.body);
@@ -30,8 +41,9 @@ const resourceRouter = (db) => {
           })
         })
       })
+  });
 
-  })
+
 
   // Change index to resource page
   router.get("/:id", (req, res) => {
