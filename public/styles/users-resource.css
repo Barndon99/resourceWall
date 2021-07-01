@@ -1,5 +1,5 @@
 .wrapper {
-  padding-top: 170px;
+  padding-top: 100px;
   padding-bottom: 250px;
   display: grid;
   grid-template-columns: repeat(10, 18em);
@@ -12,6 +12,8 @@
     "d d b c"
     "a a a c"
     "a a a c"
+    "a a a e"
+    "a a a e"
     "a a a e";
 }
 .title {

@@ -14,11 +14,15 @@
 }
 
 .nav_logo_title {
-  transform: rotate(-20deg);
-  margin: -55px;
+  transform: rotate(-15deg);
+  margin: -130px;
   overflow-y: hidden;
 }
 
+.nav_logo_title:hover {
+  transform: rotate(-10deg);
+  cursor: pointer;
+}
 
 .navHeadSpace {
   height: 250px;

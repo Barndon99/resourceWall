@@ -9,10 +9,12 @@
 
 a:link {
    text-decoration: none;
+   color: #27be3b;;
 }
 /* visited link */
 a:visited {
    text-decoration: none;
+   color: yellow;
 }
 /* mouse over link */
 a:hover {
