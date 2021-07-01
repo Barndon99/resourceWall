@@ -9,7 +9,7 @@ const registerRouter = (db) => {
     res.render('register.ejs');
   });
 
-  router.post('/new', (req, res) => {
+  router.post('/', (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
     const password = req.body.password;

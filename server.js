@@ -65,8 +65,6 @@ app.get("/", (req, res) => {
  res.redirect('/categories/')
 });
 
-
-
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
