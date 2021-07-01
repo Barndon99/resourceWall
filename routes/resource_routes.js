@@ -61,9 +61,9 @@ const resourceRouter = (db) => {
     const id = req.params.id;
     const content = req.body.newComment;
     console.log(req.session.id);
-
+    //req.session.uder_id
     db.query(`INSERT INTO resource_comments(guest_id, resource_id, comments, timestamp)
-      VALUES('1', '${id}', '${content}', current_timestamp);
+      VALUES('${req.session.user_id}', '${id}', '${content}', current_timestamp);
       `)
       .then((response) => {
       db.query(`SELECT resources.*, resource_comments.comments as comments, users.name as name FROM resources JOIN resource_comments ON resource_comments.resource_id = resources.id JOIN users on resource_comments.guest_id = users.id WHERE resources.id = ${id} LIMIT 3;`)

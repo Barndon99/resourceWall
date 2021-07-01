@@ -43,21 +43,20 @@ app.use(cookieSession({
 const categoryRoutes = require("./routes/categories");
 const resourceRoutes = require("./routes/resource_routes");
 const userRoutes = require("./routes/users_routes");
+const loginRoutes = require("./routes/login_routes");
+const registerRoutes = require("./routes/register");
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 //app.use("/api/users", usersRoutes(db));
 //Always logged in
-app.get('/login/:id', (req, res) => {
-  req.session.user_id = req.params.id;
-  console.log(req.session.user_id);
-  res.redirect('/');
-});
 
 // Note: mount other resources here, using the same pattern above
 app.use("/categories", categoryRoutes(db));
 app.use("/resources", resourceRoutes(db));
 app.use("/user", userRoutes(db));
+app.use("/login", loginRoutes(db));
+app.use("/register", registerRoutes(db));
 
 // Home page //
 // Warning: avoid creating more routes in this file!

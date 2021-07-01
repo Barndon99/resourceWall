@@ -29,7 +29,11 @@
     <script type="text/javascript" src="/scripts/categories_population.js"></script>
   </head>
   <!-- Top nav bar (fixed) -->
+  <% if (!user) { %>
+  <%- include('partials/_loginHeader.ejs') %>
+  <% } else { %>
   <%- include('partials/_header.ejs') %>
+  <% }; %>
   <body class="main-body">
     <section id="categories">
       <div>
