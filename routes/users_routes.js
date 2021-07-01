@@ -5,11 +5,12 @@ const router  = express.Router();
 
 const userRouter = (db) => {
   router.get("/", (req, res) => {
+    console.log("userRoutes .get");
       res.redirect(`/user/${req.session.user_id}`);
   });
 
   router.get('/:id', (req, res) => {
-    const id = req.params.id;
+    const id = req.session.user_id;
     console.log("HERE");
     Promise.all([db.query(`SELECT * FROM users WHERE users.id = ${id};`), db.query(`
     SELECT resources.*, users.id as userId, resources.id as id

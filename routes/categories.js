@@ -11,9 +11,10 @@ const router  = express.Router();
 
 const categoryRouter = (db) => {
   router.get("/", (req, res) => {
+    console.log("SESSION ID: ", req.session.user_id);
     db.query(`SELECT * FROM categories;`)
     .then(response => {
-      const templateVars = { categories: response.rows };
+      const templateVars = { categories: response.rows, user: req.session.user_id  };
       console.log("templatevars:", templateVars);
       return res.render('index', templateVars);
       })
@@ -35,7 +36,7 @@ const categoryRouter = (db) => {
     WHERE resources.category_id = ${id}
     GROUP BY resources.category_id, resources.title, categories.name, resources.id;`)
     .then(response => {
-      const templateVars = { resources: response.rows };
+      const templateVars = { resources: response.rows, user: req.session.user_id };
       console.log("TEMPLATE VARS:", templateVars);
       return res.render('resource_page', templateVars);
     })
