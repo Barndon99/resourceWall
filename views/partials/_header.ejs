@@ -3,19 +3,36 @@
     <div class="nav_bar_container">
       <a href ="/" class="nav_logo_title" >
         <img src="/images/logo_bubble.png" style= "width: 400px;"></a>
-
            <span class="nav-links text-outline ">
-             <a href="/categories/"><div class="categories"> categories<i class="fa-solid fa-code"></i></div></a>
+             <a href="/categories/"><div class="categories" > categories<i class="fa-solid fa-code"></i></div></a>
              <a href="/user/<%- user[0] %>"><div class="username">My Resources<i class="fa-solid fa-code"></i></div></a>
              <a href="/login/logout"><div class="logout"> logout<i class="fa-solid fa-code"></i></div></a>
             </span>
-             <!-- <a id="signup" href="/user">John Jane &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-             <a id="username"> Links</a> -->
-
             <span class="flash-light">
-              <img src="/images/glowing-flashlight.png" style ="width: 400px;" >
+              <img class="flash-light" src="/images/flash-light_v2/1.5x/flash-light@1.5x.png" style ="width: 400px;">
           </span>
+          <!-- Dialog Box-->
+          <div class="Searchbox-container">
+            <div class="dialog" id="searchform">
+              <form method="POST" action=" ">
+                <div class="drop-down">
+                  <select id="search" name="search">
+                    <option value="Git">GIT</option>
+                    <option value="Vim">VIM</option>
+                    <option value="Javascript">JAVASCRIPT</option>
+                    <option value="HTML/CSS">HTML/CSS</option>
+                    <option value="Node.js">NODE.JS</option>
+                    <option value="Databases">DATABASES</option>
+                  </select>
+                </div>
+                <!-- OK BUTTON -->
+                <div align="center">
+                  <button type="submit" id="btnOK">OK</button>
+                </div>
+              </form>
+            </div>
+            <!-- end of form  -->
     </div>
-  </nav>
+</nav>
 </header>
 <div class="navHeadSpace"></div>

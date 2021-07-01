@@ -1,0 +1,60 @@
+
+.Searchbox-container {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  margin: -25px 0 0 -25px;
+}
+.Searchbox{
+  border:5px solid rgb(0, 0, 0);
+  background: mediumspringgreen;
+  padding: 100px;
+  position:absolute;
+  display:none;
+}
+.dialog label{
+  display:inline-block;
+  color:#000000;
+}
+input[type=text]{
+  font-family: 'Comic Neue', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  border:5px solid rgb(0, 0, 0);
+  display:center;
+
+  margin:5px;
+}
+.drop-down{
+  font-family: 'Comic Neue', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  border:5px solid rgb(0, 0, 0);
+  display:center;
+  margin:5px;
+}
+#btnOK{
+  border:1px solid #000;
+  background:#ff9999;
+  margin:5px;
+  font-family: Bungee;
+  font-size: 50px;
+}
+
+#btnOK:hover{
+  border:1px solid #000;
+  background: rgb(208, 255, 0);
+}
+
+.flash-light {
+  margin: -180px;
+  margin: -20px;
+  z-index: 4;
+}
+
+.flash-light:hover {
+  transform: rotate(10deg);
+  cursor: pointer;
+}

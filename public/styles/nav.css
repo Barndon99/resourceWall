@@ -19,12 +19,6 @@
   overflow-y: hidden;
 }
 
-.flash-light {
-  transform: rotate(180deg);
-  margin: -20px;
-  margin: -20px;
-  z-index: 4;
-}
 
 .navHeadSpace {
   height: 250px;
@@ -44,14 +38,19 @@
 .username:hover {
   color: #57bfda;
 }
+.username:link {
+  text-decoration: none!important;
+}
 
 .categories {
   color: mediumslateblue;
   font-size: 55px!important;
-
 }
 .categories:hover {
   color: #ff0d19;
+}
+.categories:link {
+  text-decoration: none!important;
 }
 
 .logout {
@@ -60,6 +59,9 @@
 }
 .logout:hover {
   color: white;
+}
+.logout:link {
+  text-decoration: none!important;
 }
 
 .text-outline {
