@@ -34,12 +34,6 @@
 
 * As a logged in user I want to `register`, `login`, `logout` and `update` my profile because my info can change and I wish to protect my saved resources. 
 
-## User Scenarios
-
-* 
-* 
-* 
-* 
 
 ## ERD/Entities
 
@@ -80,24 +74,24 @@ We have lots of plans
 
 ### Presentations
 
+* Personal intro/why you are excited/why you liked working on this project
+
 1. Why did we choose to make a "Resource Wall"? 
-    * We immediately recognized the utility of this project. On a daily if not hourly basis we find ourselves saving the resources provided to us in compass and those that we find ourselves to a bookmarked folder. However, once saved, we found it difficult to find a particular resource considering the amount and their varying categories. We created an application where you categorize your resources and make them publically available for other users to save, rate and reference. This would save time in the long run for users who are just starting out in a particular field/hobby, allowing them to access the most useful resources by leaning on the expertise of the collective. 
+    * We recognized the utility of this project. We often find ourselves saving the resources provided to us in compass and those that we find ourselves to a bookmarked folder. However, once saved, we found it difficult to find a particular resource considering the amount and their varying categories. We created an application where you categorize your resources and make them publically available for other users to save, rate and reference. This would save time in the long run for users who are just starting out in a particular field/hobby, allowing them to access the most useful resources by leaning on the expertise of the collective. 
 
 2. How did we all participate in creating this web app? 
     * Through a combitation of dividing the work vertically and routine pair-programming we achieved our MVD. The major divides were Rossanne on front-end, Brandon on the routes and Leam on the database. 
 
 3. How to Demo
-  * Personal intro/why you are excited/why you liked working on this project
 
   * Run through main features in layman terms (overview)
     * database w/ 6 tables (users, resources, users_resources, categories, comments, ratings)
-    * This is not a SPA and relies on routes/pages to display the `categories`, `resource`, `saved_resources` and, `owned_resources` pages. Similar to the tweeter project, data is appeneded to the html. 
+    * Pinit relies on routes/pages to display the `categories`, `resource`, `saved_resources` and, `owned_resources` pages. Similar to the tweeter project, data is appeneded to the html. 
     * Saving a resource 
     * Commenting on a resource
     * Rating a resource
-    * `Stretch` Creating a resource 
+    * Creating a resource 
     * `Stretch` Creating a category 
-
 
   * Share screen w/ project running
     * anounce who will screen share/navigate and who will explain (___ will be sharing their screen and navigating {project name} as I go through its main features)
