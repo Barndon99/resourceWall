@@ -1,5 +1,7 @@
 # Resource Wall (Pinit)
-![Gif of Project]()
+![Gif of Project](https://github.com/Barndon99/resourceWall/blob/master/docs/midterm1.gif?raw=true)
+![Gif of Project](https://github.com/Barndon99/resourceWall/blob/master/docs/midterm2.gif?raw=true)
+
 ## Contributors
  
 `Brandon Rowlandson` [@Barndon99](https://github.com/Barndon99)
@@ -25,13 +27,17 @@ For example:
  
 We proceeded to make an `ERD(Entity Relationship Diagram)`, using the user stories to build out our database with entities.
  
-![ERD image]()
+![ERD image](https://github.com/Barndon99/resourceWall/blob/master/docs/ERD.png?raw=true)
  
 From there we brainstormed the `routes` required to perform *BREAD* operations on the resources.
  
 Last but not least we created `wireframes` for the structure of our web pages with the intention of making it easier to build the pages.
  
-![wireframe images]()
+
+![wireframe images](https://github.com/Barndon99/resourceWall/blob/master/docs/pinit-home-page-wireframe.png?raw=true)
+
+
+![wireframe images](https://github.com/Barndon99/resourceWall/blob/master/docs/pinit-resource-page-wireframe.png?raw=true)
 
 ## Features 
 **The main features include the following:**
@@ -95,3 +101,4 @@ Last but not least we created `wireframes` for the structure of our web pages wi
 - [] Should be able to save a resource only once. 
 - [] Display timestamps on comments and created resources.
 - [] Add more search functionality i.e. by rating, by resource. 
+- [] multi-media

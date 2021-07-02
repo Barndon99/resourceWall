@@ -71,13 +71,18 @@ app.get('/login/:id', (req, res) => {
 
 We have lots of plans 
 
-
 ### Presentations
 
 * Personal intro/why you are excited/why you liked working on this project
 
 1. Why did we choose to make a "Resource Wall"? 
-    * We recognized the utility of this project. We often find ourselves saving the resources provided to us in compass and those that we find ourselves to a bookmarked folder. However, once saved, we found it difficult to find a particular resource considering the amount and their varying categories. We created an application where you categorize your resources and make them publically available for other users to save, rate and reference. This would save time in the long run for users who are just starting out in a particular field/hobby, allowing them to access the most useful resources by leaning on the expertise of the collective. 
+    * We recognized the utility of this project. We often find ourselves saving the resources provided to us in compass and those that we find ourselves to a bookmarked folder.
+
+     However, once saved, we found it difficult to find a particular resource considering the amount and their varying categories. 
+     
+     We created an application where you categorize your resources and make them publically available for other users to save, rate and reference. 
+     
+     This would save time in the long run for users who are just starting out in a particular field/hobby, allowing them to access the most useful resources by leaning on the expertise of the collective. 
 
 2. How did we all participate in creating this web app? 
     * Through a combitation of dividing the work vertically and routine pair-programming we achieved our MVD. The major divides were Rossanne on front-end, Brandon on the routes and Leam on the database. 
@@ -118,6 +123,13 @@ We have lots of plans
     * Search bar
 
 4. What are some challenges we overcame during this project (lessons learned)? 
+
     * git (fetch/merge, working on branches and creating pull requests)
+
     * Working as a coding team for the first time - dividing the work(wearing your own hat), regular check-ins, relying on others to do their part.
+
     * gained a better understanding of how everything connects compared to before when understanding was fragmented.
+
+https://i.imgur.com/RMLYt23.jpeg
+
+All we ever see of stars are their old photographs.
