@@ -46,7 +46,6 @@ FROM resources
 JOIN categories ON categories.id = category_id
 ORDER BY categories.name;
 
--- atm resources don't have a name/title so just used url
 -- this counts the times a resource was saved
 SELECT resources.id, COUNT(users_resources.resource_id) as times_saved, resources.url
 FROM resources
@@ -83,11 +82,6 @@ JOIN users ON users.id = resources.owner_id
 WHERE users.id = 3;
 
 
-
--- How to query owner and guest at the same time?
--- I think we need to update the database as the
--- query is not no working properly for the last
--- 2 users
 SELECT users.name, 
 users.id as saver_id, 
 resources.url as saved_link,
