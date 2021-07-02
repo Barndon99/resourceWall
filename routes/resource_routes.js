@@ -58,7 +58,7 @@ const resourceRouter = (db) => {
       //console.log(response.rows);
       const id = req.session.user_id;
       const resource = response.rows;
-      console.log(">>>>>XXXXXXX", response.rows[0]);
+      console.log("🤮🤮🤮🤮🤮🤮🤮", response.rows[0]);
       const templateVars = {resource, user: id }
       //console.log("<<<<", templateVars);
       res.render('resource_show', templateVars);
